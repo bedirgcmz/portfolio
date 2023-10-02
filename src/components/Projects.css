@@ -1,0 +1,112 @@
+.carousel-inner {
+    background-color: #004046;
+    min-height: 500px;
+    
+}
+.top-cards, .bottom-cards{
+    padding: 5px 10px;
+    margin: 10px 0px;
+    /* display: flex;
+    justify-content: space-around; */
+}
+.my-card {
+    display: flex;
+    background-color: #004046;
+    padding: 8px 12px;
+    /* width: calc(48% - 80px); */
+    border-radius: 10px;
+    margin: 10px 0px;
+    color: white;
+    box-shadow: #000 0px 3px 8px;
+}
+.card-left-content {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+
+.card-img {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 10px;
+}
+.line-and-cirkle-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.one, .two {
+    display: flex;
+    width: 35%;
+    align-items: center; 
+    justify-content: center;   
+}
+.line {   
+    height: 4px;
+    width: 90%;
+    background-color: #FF7D00;
+    border-radius: 5px;
+}
+.circle{
+    height: 12px;
+    width: 14px;
+    background-color: #FF7D00;
+    border-radius: 50%;
+}
+.l-circle {
+    margin-left: -3px;
+    }
+.r-circle {
+margin-right: -3px;
+}
+
+.card-right-content {
+    width: 65%;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.project-info {
+    text-align: justify;
+    font-size: 0.8rem;
+}
+.see-demo, .go-github {
+    border-radius: 10px;
+    background-color: white;
+    padding: 0.2rem 1rem;
+    width: 110px;
+    font-size: 0.7rem;
+    text-align: center;
+}
+.see-demo {
+    border: 2px solid #33BBC5;
+    color: #33BBC5;
+    
+}
+.go-github {
+    border: 2px solid #FF7D00;
+    color: #FF7D00;
+}
+
+@media only screen and (max-width: 600px) {
+    .my-card {
+        /* flex-direction: column;
+        align-items: center; */
+    }
+    .card-left-content {
+        width: 55%;
+    }
+    .card-right-content {
+        width: 45%;
+    }
+    .project-info {
+        font-size: 0.6rem;
+    }
+    .see-demo, .go-github  {
+        font-size: 0.5rem;
+    }
+}
