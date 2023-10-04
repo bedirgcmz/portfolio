@@ -1,0 +1,86 @@
+.skills-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 250px 0;
+}
+.skills-wheel {
+width: 25%;
+}
+.skill-img {
+    width: 37px;
+}
+.skill-right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-top: -6px;
+}
+.skill-point {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #FF7D00;
+}
+.progress-container {
+    width: 140px;
+    position: relative;
+}
+.progress {
+height: 7px;
+display: inline-block;
+position: absolute;
+}
+.p-orange {
+    width: 100%;
+    background-color: #FF7D00;
+    border-radius: 10px;
+    border: 2px solid #FF7D00;
+    box-sizing: content-box;
+}
+
+.p-blue {
+    width: 95%;
+    background-color: #33BBC5;
+    border-radius: 10px;
+    z-index: 12;
+    top: 1.7px;
+    left: 2px;
+}
+
+
+.skill {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    border: 2px solid #33BBC5;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 14px 4px 7px;
+    box-shadow: rgb(51 187 197 / 45%) 0px 0px 15px;
+  
+}
+.html {
+    top: 250px;
+    left: 10%;
+}
+.css {
+    top: 150px;
+    left: 17%;
+}
+.js {
+    top: 50px;
+    left: 42%;
+}
+.bootstrap {
+    top: 150px;
+    right: 17%;
+}
+.react {
+    top: 250px;
+    right: 10%;
+}

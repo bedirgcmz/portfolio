@@ -1,3 +1,6 @@
+.carousel-indicators {
+    bottom: -25px !important;
+}
 .carousel-inner {
     background-color: #004046;
     min-height: 500px;

@@ -31,16 +31,11 @@ const CustomNavbar = () => {
             <Nav.Link clasName="" href="#experiences">Experiences</Nav.Link>
             <Nav.Link clasName="" href="#educations">Educations</Nav.Link>
             <Nav.Link clasName="" href="#contact">Contact</Nav.Link>
-            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-            </NavDropdown> */}
           </Nav>
         </Navbar.Collapse>
-        <div className='download-cv float-right btn-one'>
+        <a href='www.google.com' target='_blank' className='download-cv float-right btn-one'>
             <span ><i class="fa-solid fa-download pe-2"></i>Download CV</span>        
-        </div>
+        </a>
       </Navbar>
    
   );

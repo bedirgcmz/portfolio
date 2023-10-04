@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Clinton Semibold';
+    src: url('./fonts/ClintonSemibold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Clinton Bold';
+    src: url('./fonts/ClintonBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Clinton BoldItalic';
+    src: url('./fonts/ClintonBolditalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Clinton Extrabold';
+    src: url('./fonts/ClintonExtraBold.ttf') format('truetype');
+    font-weight: 800; /* Extrabold'un genellikle 800 olduğunu belirtiyoruz */
+    font-style: normal;
+  }
+  
