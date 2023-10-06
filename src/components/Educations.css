@@ -1,0 +1,42 @@
+.educations-container {
+    margin: 0 10%;
+}
+.edu-date{
+    font-size: 0.7rem !important;
+    position: absolute;
+    top: 41px;
+    left: 52px;
+    font-weight: 400;
+    color: #606d78;
+}
+.accordion-button {
+    padding: 16px 16px 30px 16px;
+    background-color: #004046;
+    /* background-color: #33bbc5; */
+    color: white;
+    font-weight: 700;
+}
+.accordion-header {
+    position: relative;
+}
+.accordion-item {
+    margin:auto;
+    border: 2px solid #ff7d00;
+    max-width: 750px;
+}
+.accordion-body {
+    background-color: beige;
+    color: #02666f;
+    text-align: justify;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #ff7d00;
+    color: white;
+}
+.edu-company-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.accordion-button::after {
+    color: white !important;
+} 

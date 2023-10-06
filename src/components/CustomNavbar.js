@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navbar.css'; 
+import './hovers.css'; 
 import './Download.css'; 
 import img1 from "../images/img2.jpg"
 
@@ -25,12 +26,12 @@ const CustomNavbar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link clasName=" active" href="#about">About</Nav.Link>
-            <Nav.Link clasName="" href="#projects">Projects</Nav.Link>
-            <Nav.Link clasName="" href="#skills">Skills</Nav.Link>
-            <Nav.Link clasName="" href="#experiences">Experiences</Nav.Link>
-            <Nav.Link clasName="" href="#educations">Educations</Nav.Link>
-            <Nav.Link clasName="" href="#contact">Contact</Nav.Link>
+            <Nav.Link clasName="hover-3 active" href="#about">About</Nav.Link>
+            <Nav.Link clasName="hover-3" href="#projects">Projects</Nav.Link>
+            <Nav.Link clasName="hover-3" href="#skills">Skills</Nav.Link>
+            <Nav.Link clasName="hover-3" href="#experiences">Experiences</Nav.Link>
+            <Nav.Link clasName="hover-3" href="#educations">Educations</Nav.Link>
+            <Nav.Link clasName="hover-3" href="#contact">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
         <a href='www.google.com' target='_blank' className='download-cv float-right btn-one'>

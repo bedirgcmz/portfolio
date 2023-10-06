@@ -1,5 +1,4 @@
 import React from "react";
-import img from "../images/img1.jpg";
 import "./Projects.css";
 import projectData from "../data/ProjectsData.json";
 
