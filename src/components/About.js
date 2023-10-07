@@ -5,8 +5,8 @@ import aboutImg from "../images/about_img.png"
 
 const About = () => {
   return (
-    <div className='about-margin-top'>
-      <h2 className='ms-3 text-white'>About Me</h2>
+    <div id='about' className='about-margin-top'>
+      {/* <h2 className='ms-4 text-white'>About Me</h2> */}
       <div className='about-container row'>
           <div className='touch-me-container col-md-1'>
             <span className='d-inline-block touch'>Touch</span>
