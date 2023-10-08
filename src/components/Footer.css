@@ -16,7 +16,7 @@
     text-align: center;
   }
   .vertical-line {
-    height: 30px;
+    height: 100px;
     border-left: 3px solid white;
   }
   
@@ -33,5 +33,11 @@
     margin: 0 10px;
     width: 90px;
     font-size: 0.8rem;
+  }
+  .footer-link:hover {
+    color: #004046;
+    font-weight: 600;
+    transform: scale(1.2);
+    cursor: pointer;
   }
   
