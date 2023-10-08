@@ -182,9 +182,18 @@
     .touch-me-container {
         top: 103%;
     }
+    .touch {
+        margin-right: 4px;
+    }
+    .me {
+        margin-right: 4px;
+    }
     .github-icon, .linkedin-icon {
-        margin: 0 13px;
+        margin: 0 10px;
         margin-top: 15px;
     }
+    /* .circle-1, .circle-2 {
+        height: 11px;
+    } */
     
 }

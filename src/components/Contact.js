@@ -19,35 +19,19 @@ const Contact = () => {
   return (
     <div className='contact-container container'>
         <form onSubmit={sendEmail}>
-        <h4 className='text-center contact-me-header'>Contac Me</h4>
+        <h4 className='text-center contact-me-header'>Contact Me</h4>
             <div className="input-area mb-3">
-                {/* <label  className="form-label">Full Name</label> */}
                 <i className="form-icon fa-solid fa-user"></i>
                 <input name='name' type="text" className="form-control name" required placeholder=" Your fullname.."/>
             </div>
             <div className="input-area mb-3">
             <i className="form-icon fa-regular fa-envelope"></i>
-                {/* <label className="form-label">Email address</label> */}
                 <input name='email' type="email" className="form-control email" required placeholder="  name@example.com"/>
             </div>
             <div className="mb-3 input-area">
-                {/* <label  className="form-label">Your Messages</label> */}
                 <textarea name='message' className="form-control message" rows="3" required placeholder="Write your messages"></textarea>
                 <button id='send-button' name='submit' type="submit" className="form-control glow-on-hover submit my-2">Gönder</button>
-            </div>
-            {/* <div className="mb-3">
-                <label for="exampleFormControlInput1" className="form-label">Full Name</label>
-                <input name='name' type="text" className="form-control" id="exampleFormControlInput1" placeholder="Write your name and surname.."/>
-            </div>
-            <div className="mb-3">
-                <label for="exampleFormControlInput1" className="form-label">Email address</label>
-                <input name='email' type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
-            </div>
-            <div className="mb-3">
-                <label for="exampleFormControlTextarea1" className="form-label">Your Messages</label>
-                <textarea name='massage' className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                <input name='submit' type="submit" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
-            </div> */}
+            </div>            
         </form>
         <div className='touch-me'>
             <h4 className='text-center'>Touch Me</h4>
@@ -67,8 +51,6 @@ const Contact = () => {
                         <i className="fa-brands fa-github"></i>
                     </div>
                 </div>
-                {/* <i className="fa-brands fa-linkedin"></i>
-                <i className="fa-brands fa-github"></i> */}
             </div>
         </div>
     </div>

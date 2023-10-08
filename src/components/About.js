@@ -19,7 +19,7 @@ const About = () => {
             <span className='d-inline-block me'>me</span>
           </div>
           {/* <div className='about-me-text-container col-6 col-sm-12 col-'> */}
-          <div className='about-me-text-container col-12 col-sm-12 col-md-5'>
+          <div className='about-me-text-container col-12 col-sm-12 col-md-6'>
               <h1 className='my-fullname text-center'>Welcome, I'm <span className='d-block'>Bedir Gocmez</span> </h1>
               <p className='about-me-text text-justify'>
                 I am an ambitious Developer with a passion for software and technology. 
