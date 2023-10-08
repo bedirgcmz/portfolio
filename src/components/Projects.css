@@ -82,7 +82,7 @@ margin-right: -3px;
     border-radius: 10px;
     background-color: white;
     padding: 0.2rem 1rem;
-    width: 110px;
+    width: calc(50% - 6px);
     font-size: 0.7rem;
     text-align: center;
     text-decoration: none;
@@ -96,6 +96,8 @@ margin-right: -3px;
     border: 2px solid #FF7D00;
     color: #FF7D00;
 }
+
+
 
 @media only screen and (max-width: 600px) {
     .my-card {

@@ -12,9 +12,9 @@
 .accordion-button {
     padding: 16px 16px 30px 16px;
     background-color: #004046;
-    /* background-color: #33bbc5; */
     color: white;
     font-weight: 700;
+    transition: .6s, -webkit-mask-size .6s .6s;
 }
 .accordion-header {
     position: relative;
@@ -40,3 +40,7 @@
 .accordion-button::after {
     color: white !important;
 } 
+
+.accordion-button:hover {
+    background-color: #33bbc5;
+}

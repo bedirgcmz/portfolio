@@ -16,7 +16,8 @@
     transform: scale(1.1);
   }
   
-  .hover-2::before {
+  /* project hover.. soldan gelen arka plan*/
+  /* .hover-2::before {
     background: #15616D;
     border-radius: 30px;
     content: "";
@@ -26,6 +27,8 @@
     transform-origin: right;
     transition: transform 0.5s ease-in-out;
     z-index: -1;
+    border-radius: 30px;
+
   }
   
   .hover-2:hover::before {
@@ -37,8 +40,36 @@
     box-shadow: #000 0px 0px 15px;
     transform: scaleX(1.2);
     transition: transform 0.6s;
-  }
+  } */
 
+  .hover-2 {
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+    
+  .hover-2:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: rgb(0, 115, 141);
+    transition: all 0.3s ease;
+    border-radius: 30px;
+  }
+  
+  .hover-2:hover:after {
+    top: 0;
+    height: 100%;
+  }
+  
+  /* .hover-2:active {
+    top: 2px;
+  } */
+
+/** Hover 4**/
   .hover-4 {
     --c: #1095c1; /* the color */
     --b: .1em;    /* border length*/
@@ -195,13 +226,13 @@
   100% { background-position: 0 0; }
 }
 
-.wrapper{
+/* .wrapper{
   position: fixed;
   top: 50%;
   left: 50%;
   border-radius: 20px; /*aaaa*/
-  transform: translate(-50%, -50%);
-}
+  /* transform: translate(-50%, -50%); */
+/* }
 
 a{
   display: block;
@@ -241,4 +272,93 @@ a:hover{
 
 a:hover:after{
   width: 100%;
+} */ 
+
+/* Sagdan gelip soldan giden arka plan*/
+.btn41-43 {
+  /* padding: 10px 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;*/
+  background: transparent; 
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-41 {
+  border: 2px solid #33BBC5;
+  z-index: 1;
+  color: white; 
+}
+
+.btn-41:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: #33BBC5;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+
+
+}
+
+.btn-41:hover {
+  color: rgb(255, 255, 255);
+  border: 2px solid #fff;
+
+}
+
+.btn-41:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+.btn-41:active {
+  top: 2px;
+}
+
+.btn-42 {
+  border: 2px solid #33BBC5;
+  z-index: 1;
+  color: white; 
+}
+
+.btn-42:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: #FF7D00;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+
+
+}
+
+.btn-42:hover {
+  color: rgb(255, 255, 255);
+  border: 2px solid #fff;
+
+}
+
+.btn-42:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+.btn-42:active {
+  top: 2px;
 }

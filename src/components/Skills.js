@@ -113,10 +113,6 @@ const ProfSkills = () => {
                                 <span className='progress p-blue'></span>
                             </span>
                         </div>
-                        {/* <div className='progress-container'>
-                            <span className='progress p-orange'></span>
-                            <span className='progress p-blue'></span>
-                        </div> */}
                     </div>
                 </div>)
             )   
@@ -156,7 +152,6 @@ const PersSkills = () => {
   <>
         { myPersSkills.map( (skill, index) => (
                 <div key={index} className={`skill ${skill.class} hover-2`}>
-                {/* <img src={skill.img} className='skill-img' ></img> */}
                     <div className='skill-right-content'>
                         <div className='skill-name-container'>
                             <span className='skill-point me-2'></span>
@@ -168,10 +163,6 @@ const PersSkills = () => {
                             </span>
                             
                         </div>
-                        {/* <div className='progress-container'>
-                            <span className='progress p-orange'></span>
-                            <span className='progress p-blue'></span>
-                        </div> */}
                     </div>
                 </div>)
             )   

@@ -4,6 +4,10 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer className="footer">
+        <a href='#about' className='back-top'> 
+          <span>Back top </span> 
+          <span><i class="fa-solid fa-chevron-right"></i><i class="fa-solid fa-chevron-right"></i><i class="fa-solid fa-chevron-right"></i></span>
+        </a>
       <div className="footer-left-side">
         <p className='my-2'>&#169; 2023 Copyright</p>
         <p className='my-2'>Bedir Gocmez</p>

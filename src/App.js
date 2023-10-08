@@ -29,7 +29,7 @@ function App() {
       <ThreeCircles linkId={"contact"} />
       <h2 id='' className='ms-4 text-white'>Contact</h2>
       <Contact />
-      <ThreeCircles />
+      <ThreeCircles />      
       <Footer />
     </div>
   );
