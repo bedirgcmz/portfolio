@@ -1,321 +1,391 @@
 .prof-skills-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 250px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 250px 0;
 }
 .pers-skills-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 250px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 250px 0;
 }
 .pers-skills-container .skill {
-    justify-content: center;
+  justify-content: center;
 }
 .skills-wheel {
-width: 20%;
+  width: 20%;
 }
 hr {
-    color: #33BBC5;
-    border: 3px solid;
-    margin: auto;
-    border-radius: 5px;
+  color: #33bbc5;
+  border: 3px solid;
+  margin: auto;
+  border-radius: 5px;
 }
 .professinal {
-    position: absolute;
-
+  position: absolute;
 }
 .skill-img {
-    width: 28px;
+  width: 28px;
 }
 .skill-right-content {
-    width: calc(100% - 28px);
-    display: flex;
-    flex-direction: column;
-    /* justify-content: start; */
-    align-items: center;
-    margin-top: -4px;
+  width: calc(100% - 28px);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: start; */
+  align-items: center;
+  margin-top: -4px;
 }
 .skill-point {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #FF7D00;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ff7d00;
 }
 #pers-skill-name {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 .progress-container {
-    width: 97%;
-    position: relative;
+  width: 97%;
+  position: relative;
 }
 .personal-progress {
-    margin-left: 16px;
+  margin-left: 16px;
 }
 .progress {
-height: 7px;
-display: inline-block;
-position: absolute;
+  height: 7px;
+  display: inline-block;
+  position: absolute;
 }
 .p-orange {
-    width: 98%;
-    background-color: #FF7D00;
-    border-radius: 10px;
-    border: 2px solid #FF7D00;
-    box-sizing: content-box;
+  width: 98%;
+  background-color: #ff7d00;
+  border-radius: 10px;
+  border: 2px solid #ff7d00;
+  box-sizing: content-box;
 }
 .p-blue {
-    width: 90%;
-    background-color: #33BBC5;
-    border-radius: 10px;
-    z-index: 12;
-    /* top: 1.7px; */
-    left: 2px;
+  width: 90%;
+  background-color: #33bbc5;
+  border-radius: 10px;
+  z-index: 12;
+  /* top: 1.7px; */
+  left: 2px;
 }
-.mysql .p-blue, .nodejs .p-blue, .expressjs .p-blue {
-    width: 70%;
+.mysql .p-blue,
+.nodejs .p-blue,
+.expressjs .p-blue {
+  width: 70%;
 }
 
 .skill {
-    position: absolute;
-    width: 200px;
-    height: 40px;
-    background-color: #004046;
-    border: 2px solid #33BBC5;
-    border-radius: 30px;
-    display: flex;
-    justify-content: space-between;
-    padding: 4px 14px 4px 7px;
-    box-shadow: rgb(51 187 197 / 45%) 0px 0px 15px;
-  
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  background-color: #004046;
+  border: 2px solid #33bbc5;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 14px 4px 7px;
+  box-shadow: rgb(51 187 197 / 45%) 0px 0px 15px;
 }
 /** Profesinal Skills**/
 .html {
-    top: 240px;
-    left: 10%;
+  top: 240px;
+  left: 10%;
 }
 .css {
-    top: 156px;
-    left: 17%;
+  top: 156px;
+  left: 17%;
 }
 .js {
-    top: 72px;
-    /* left: 41%; */
+  top: 72px;
+  /* left: 41%; */
 }
 .bootstrap {
-    top: 156px;
-    right: 17%;
+  top: 156px;
+  right: 17%;
 }
 .react {
-    top: 240px;
-    right: 10%;
+  top: 240px;
+  right: 10%;
 }
 
 .nodejs {
-    top: 324px;
-    left: 7%;
+  top: 324px;
+  left: 7%;
 }
 .mysql {
-    top: 324px;
-    right: 7%;
+  top: 324px;
+  right: 7%;
 }
 .expressjs {
-    top: 408px;
-    left: 10%;
+  top: 408px;
+  left: 10%;
 }
 .agile {
-    top: 408px;
-    right: 10%;
+  top: 408px;
+  right: 10%;
 }
 .figma {
-    top: 496px;
-    left: 17%;
+  top: 496px;
+  left: 17%;
 }
 .git {
-    top: 496px;
-    right: 17%;
+  top: 496px;
+  right: 17%;
 }
 .github {
-    top: 580px;
-    /* left: 41%; */
+  top: 580px;
+  /* left: 41%; */
 }
 
 /** Personal Skills**/
 .communication {
-    top: 240px;
-    left: 10%;
+  top: 240px;
+  left: 10%;
 }
 
 .solving {
-    top: 72px;
-    /* left: 41%; */
+  top: 72px;
+  /* left: 41%; */
 }
 .adaptability {
-    top: 240px;
-    right: 10%;
+  top: 240px;
+  right: 10%;
 }
 .teamwork {
-    top: 408px;
-    left: 10%;
+  top: 408px;
+  left: 10%;
 }
 .stress {
-    top: 408px;
-    right: 10%;
+  top: 408px;
+  right: 10%;
 }
 .creativity {
-    top: 580px;
-    /* left: 41%; */
+  top: 580px;
+  /* left: 41%; */
 }
 
 /** Media queries**/
+@media only screen and (min-width: 1024px) {
+  .html {
+    top: 266px;
+    left: 13%;
+  }
+  .css {
+    top: 183px;
+    left: 18%;
+  }
+  .js {
+    top: 100px;
+  }
+  .bootstrap {
+    top: 183x;
+    right: 18%;
+  }
+  .react {
+    top: 266px;
+    right: 13%;
+  }
+
+  .nodejs {
+    top: 349px;
+    left: 10%;
+  }
+  .mysql {
+    top: 349px;
+    right: 10%;
+  }
+  .expressjs {
+    top: 432px;
+    left: 13%;
+  }
+  .agile {
+    top: 432px;
+    right: 13%;
+  }
+  .figma {
+    top: 515px;
+    left: 18%;
+  }
+  .git {
+    top: 515px;
+    right: 18%;
+  }
+  .github {
+    top: 640px;
+  }
+  .communication {
+    top: 274px;
+    left: 13%;
+  }
+
+  .solving {
+    top: 155px;
+  }
+  .adaptability {
+    top: 274px;
+    right: 13%;
+  }
+  .teamwork {
+    top: 466px;
+    left: 13%;
+  }
+  .stress {
+    top: 466px;
+    right: 13%;
+  }
+  .creativity {
+    top: 582px;
+  }
+}
 @media only screen and (max-width: 992px) {
-    .skills-wheel {
-        width: 32%;
-        margin-top: -20px;
-    }
-    .skill {
-        width: 180px;
-        font-size: 0.8rem;
-    }
-    .p-orange {width: 97%;}
-    .p-blue {width: 84%;}
-    .html {
-        top: 240px;
-        left: 5%;
-    }
-    .css {
-        top: 156px;
-        left: 10%;
-    }
-    .js {
-        top: 72px;
-        /* left: 33%; */
-    }
-    .bootstrap {
-        top: 156px;
-        right: 10%;
-    }
-    .react {
-        top: 240px;
-        right: 5%;
-    }
-    
-    .nodejs {
-        top: 324px;
-        left: 2%;
-    }
-    .mysql {
-        top: 324px;
-        right: 2%;
-    }
-    .expressjs {
-        top: 408px;
-        left: 5%;
-    }
-    .agile {
-        top: 408px;
-        right: 5%;
-    }
-    .figma {
-        top: 496px;
-        left: 10%;
-    }
-    .git {
-        top: 496px;
-        right: 10%;
-    }
-    .github {
-        top: 580px;
-        /* left: 33%; */
-    }
-    .communication {
-        top: 254px;
-        left: 5%;
-    }
-    
-    .solving {
-        top: 135px;
-        /* left: 33%; */
-    }
-    .adaptability {
-        top: 254px;
-        right: 5%;
-    }
-    .teamwork {
-        top: 446px;
-        left: 5%;
-    }
-    .stress {
-        top: 446px;
-        right: 5%;
-    }
-    .creativity {
-        top: 562px;
-        /* left: 33%; */
-    }
+  .skills-wheel {
+    width: 32%;
+    margin-top: -20px;
+  }
+  .skill {
+    width: 180px;
+    font-size: 0.8rem;
+  }
+  .p-orange {
+    width: 97%;
+  }
+  .p-blue {
+    width: 84%;
+  }
+  .html {
+    top: 240px;
+    left: 5%;
+  }
+  .css {
+    top: 156px;
+    left: 10%;
+  }
+  .js {
+    top: 72px;
+  }
+  .bootstrap {
+    top: 156px;
+    right: 10%;
+  }
+  .react {
+    top: 240px;
+    right: 5%;
+  }
+
+  .nodejs {
+    top: 324px;
+    left: 2%;
+  }
+  .mysql {
+    top: 324px;
+    right: 2%;
+  }
+  .expressjs {
+    top: 408px;
+    left: 5%;
+  }
+  .agile {
+    top: 408px;
+    right: 5%;
+  }
+  .figma {
+    top: 496px;
+    left: 10%;
+  }
+  .git {
+    top: 496px;
+    right: 10%;
+  }
+  .github {
+    top: 580px;
+  }
+  .communication {
+    top: 254px;
+    left: 5%;
+  }
+
+  .solving {
+    top: 135px;
+  }
+  .adaptability {
+    top: 254px;
+    right: 5%;
+  }
+  .teamwork {
+    top: 446px;
+    left: 5%;
+  }
+  .stress {
+    top: 446px;
+    right: 5%;
+  }
+  .creativity {
+    top: 562px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    hr {
-        margin: 46px auto;
-    }
-    .pers-skills-container {
-        padding-top: 150px;
-    }
-    .prof-skills-container .skills-wheel {
-        margin-top: 28px;
-    }
-    .pers-skills-container .skills-wheel {
-        margin-top: 4px;
-    }
-    .skill{
-        width: 150px;
-        height: 32px;
-    }
-    #pers-skill-name {
-        font-size: 0.5rem;
-        color: #FF7D00;
-    }
-    .skill-right-content {
-        margin-top: -5px;
-    }
-    .progress {
-        height: 5px;
-    }
-    /* .p-orange {
+  hr {
+    margin: 46px auto;
+  }
+  .pers-skills-container {
+    padding-top: 150px;
+  }
+  .prof-skills-container .skills-wheel {
+    margin-top: 28px;
+  }
+  .pers-skills-container .skills-wheel {
+    margin-top: 4px;
+  }
+  .skill {
+    width: 150px;
+    height: 32px;
+  }
+  #pers-skill-name {
+    font-size: 0.5rem;
+    color: #ff7d00;
+  }
+  .skill-right-content {
+    margin-top: -5px;
+  }
+  .progress {
+    height: 5px;
+  }
+  /* .p-orange {
         width: 65%;
     } */
-    .skill-point {
-        width: 8px;
-        height: 8px;
-    }
-    .communication {
-        top: 117px;
-        left: 5%;
-    }
-    
-    .solving {
-        top: 35px;
-        /* left: 33%; */
-    }
-    .adaptability {
-        top: 117px;
-        right: 5%;
-    }
-    .teamwork {
-        top: 285px;
-        left: 5%;
-    }
-    .stress {
-        top: 285px;
-        right: 5%;
-    }
-    .creativity {
-        top: 360px;
-        /* left: 33%; */
-    }
+  .skill-point {
+    width: 8px;
+    height: 8px;
+  }
+  .communication {
+    top: 117px;
+    left: 5%;
+  }
+
+  .solving {
+    top: 35px;
+  }
+  .adaptability {
+    top: 117px;
+    right: 5%;
+  }
+  .teamwork {
+    top: 285px;
+    left: 5%;
+  }
+  .stress {
+    top: 285px;
+    right: 5%;
+  }
+  .creativity {
+    top: 360px;
+  }
 }
