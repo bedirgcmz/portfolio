@@ -72,11 +72,12 @@
 }
 @media only screen and (max-width: 600px) {
   .back-top {
-    height: 54px;
+    height: 46px;
     font-size: 0.9rem;
-    right: 0%;
+    right: -1%;
+    width: 80px;
   }
   .back-top i {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
