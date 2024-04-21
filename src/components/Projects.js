@@ -3,6 +3,7 @@ import "./Projects.css";
 import "./hovers.css";
 import projectData from "../data/ProjectsData.json";
 import { motion } from "framer-motion";
+import Cards from "./Cards.js";
 
 const Projects = () => {
   const ref1 = useRef(null);
@@ -68,7 +69,7 @@ const Projects = () => {
               ></button>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active">
+              {/* <div class="carousel-item active">
                 <div className="top-cards row">
                   <div className="col-sm-12 col-md-6 col-lg-6">
                     <div className="my-card">
@@ -104,7 +105,7 @@ const Projects = () => {
                     </div>
                   </div>
                   <div className="col-sm-12 col-md-6 col-lg-6">
-                    <div className="my-card">
+                    <div className="my-card ">
                       <div className="card-left-content">
                         <img className="card-img" src={projectData[1].image} />
                         <div className="line-and-cirkle-container">
@@ -542,7 +543,12 @@ const Projects = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
+              {
+                <div class="carousel-item active ">
+                  <Cards />
+                </div>
+              }
             </div>
             <button
               class="carousel-control-prev"
