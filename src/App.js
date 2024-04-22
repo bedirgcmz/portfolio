@@ -9,7 +9,6 @@ import Experience from "./components/Experience";
 import Educations from "./components/Educations";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Swiper from "./components/Swiper";
 
 function App() {
   const ref1 = useRef(null);
