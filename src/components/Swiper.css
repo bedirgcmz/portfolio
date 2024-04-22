@@ -1,8 +1,7 @@
-.top-cards,
-.bottom-cards {
-  /* padding: 5px 10px;
-  margin: 10px 0px; */
+.swiper {
+  padding: 40px !important;
 }
+
 .my-card {
   display: flex;
   flex-direction: column;
@@ -13,17 +12,18 @@
   border-radius: 10px;
   color: white;
   box-shadow: #000 0px 3px 8px;
-  transition: 0.4;
+  transition: all ease 0.4s;
   max-width: 330px;
-  min-height: 400px;
+  min-height: 410px;
 }
+
 .my-card:hover {
   box-shadow: 0 2px 6px #f8f9fa;
 }
+
 .card-left-content {
   display: flex;
   flex-direction: column;
-  /* width: 45%; */
 }
 
 .card-img {
@@ -32,12 +32,14 @@
   margin-bottom: 10px;
   border-radius: 8px;
 }
+
 .line-and-cirkle-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
+
 .one,
 .two {
   display: flex;
@@ -45,28 +47,30 @@
   align-items: center;
   justify-content: center;
 }
+
 .line {
   height: 4px;
   width: 90%;
   background-color: #ff7d00;
   border-radius: 5px;
 }
+
 .circle {
   height: 12px;
   width: 14px;
   background-color: #ff7d00;
   border-radius: 50%;
 }
+
 .l-circle {
   margin-left: -3px;
 }
+
 .r-circle {
   margin-right: -3px;
 }
 
 .card-right-content {
-  /* width: 65%; */
-  /* margin-left: 10px; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -95,22 +99,4 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .my-card {
-    /* flex-direction: column;
-        align-items: center; */
-  }
-  .card-left-content {
-    /* width: 55%; */
-  }
-  .card-right-content {
-    /* width: 45%; */
-  }
-  .project-info {
-    font-size: 0.6rem;
-  }
-  .see-demo,
-  .go-github {
-    font-size: 0.5rem;
-    padding: 0.2rem 0.7rem;
-  }
 }

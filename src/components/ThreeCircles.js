@@ -1,33 +1,7 @@
-import { useEffect, useRef, useState } from "react";
-
 import "./ThreeCircles.css";
 import { motion } from "framer-motion";
 
 const ThreeCircles = ({ linkId }) => {
-  // const ref1 = useRef(null);
-  // const ref2 = useRef(null);
-  // const ref3 = useRef(null);
-
-  // const [scrollPos1, setScrollPos1] = useState(0);
-  // const [scrollPos2, setScrollPos2] = useState(0);
-  // const [scrollPos3, setScrollPos3] = useState(0);
-
-  // // Sayfa scroll edildiğinde pozisyonu güncelle
-  // const handleScroll = () => {
-  //   setScrollPos1(ref1.current.getBoundingClientRect().top);
-  //   setScrollPos2(ref2.current.getBoundingClientRect().top);
-  //   setScrollPos3(ref3.current.getBoundingClientRect().top);
-  // };
-
-  // // Scroll olay dinleyicisini ekleme
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll, { passive: true });
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
   const fromLeft = {
     hidden: {
       x: "-100vw",

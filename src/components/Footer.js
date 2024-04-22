@@ -5,7 +5,7 @@ const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // İsteğe bağlı: Animasyonlu bir şekilde kaydırma
+      behavior: "smooth",
     });
   };
   return (

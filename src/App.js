@@ -9,6 +9,7 @@ import Experience from "./components/Experience";
 import Educations from "./components/Educations";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Swiper from "./components/Swiper";
 
 function App() {
   const ref1 = useRef(null);
@@ -49,7 +50,7 @@ function App() {
       <CustomNavbar />
       <About />
       <div ref={ref1}>{scrollPos1 < 900 ? <ThreeCircles linkId={"projects"} /> : ""}</div>
-      <h2 className="section-header ms-4 text-white">My Projects</h2>
+      <h2 className="section-header ms-4 text-white">My Projects </h2>
       <Projects />
       <div ref={ref2}>{scrollPos2 < 900 ? <ThreeCircles linkId={"skills"} /> : ""}</div>
       <h2 className="section-header ms-4 text-white">My Skills</h2>
