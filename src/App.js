@@ -16,14 +16,14 @@ function App() {
   const ref3 = useRef(null);
   const ref4 = useRef(null);
   const ref5 = useRef(null);
-  const ref6 = useRef(null);
+  // const ref6 = useRef(null);
 
   const [scrollPos1, setScrollPos1] = useState(0);
   const [scrollPos2, setScrollPos2] = useState(0);
   const [scrollPos3, setScrollPos3] = useState(0);
   const [scrollPos4, setScrollPos4] = useState(0);
   const [scrollPos5, setScrollPos5] = useState(0);
-  const [scrollPos6, setScrollPos6] = useState(0);
+  // const [scrollPos6, setScrollPos6] = useState(0);
 
   // Sayfa scroll edildiğinde pozisyonu güncelle
   const handleScroll = () => {
@@ -32,7 +32,7 @@ function App() {
     setScrollPos3(ref3.current.getBoundingClientRect().top);
     setScrollPos4(ref4.current.getBoundingClientRect().top);
     setScrollPos5(ref5.current.getBoundingClientRect().top);
-    setScrollPos6(ref6.current.getBoundingClientRect().top);
+    // setScrollPos6(ref6.current.getBoundingClientRect().top);
   };
 
   // Scroll olay dinleyicisini ekleme
@@ -48,22 +48,36 @@ function App() {
     <div className="App">
       <CustomNavbar />
       <About />
-      <div ref={ref1}>{scrollPos1 < 900 ? <ThreeCircles linkId={"projects"} /> : ""}</div>
-      <h2 className="section-header ms-4 text-white">My Projects </h2>
-      <Projects />
-      <div ref={ref2}>{scrollPos2 < 900 ? <ThreeCircles linkId={"skills"} /> : ""}</div>
-      <h2 className="section-header ms-4 text-white">My Skills</h2>
+      <div id="projects" ref={ref1} className="link-id-tag">
+        {scrollPos1 < 900 ? <ThreeCircles linkId={"projects"} /> : ""}
+      </div>
+      <h2 className="section-header px-4 text-white">My Projects </h2>
+      <Projects fromIndex={0} toIndex={9} />
+      <Projects fromIndex={10} toIndex={30} />
+      <div id="skills" ref={ref2} className="link-id-tag">
+        {scrollPos2 < 900 ? <ThreeCircles linkId={"skills"} /> : ""}
+      </div>
+      <h2 className="section-header px-4 text-white">My Skills</h2>
       <Skills />
-      <div ref={ref3}>{scrollPos3 < 900 ? <ThreeCircles linkId={"experiences"} /> : ""}</div>
-      <h2 className="section-header ms-4 text-white">Experiences</h2>
+      <div id="experiences" ref={ref3} className="link-id-tag">
+        {scrollPos3 < 900 ? <ThreeCircles linkId={"experiences"} /> : ""}
+      </div>
+      <h2 className="section-header px-4 text-white mb-4">Experiences</h2>
       <Experience />
-      <div ref={ref4}>{scrollPos4 < 900 ? <ThreeCircles linkId={"educations"} /> : ""}</div>
-      <h2 className="section-header ms-4 text-white">Educations</h2>
+      <div id="educations" ref={ref4} className="link-id-tag">
+        {scrollPos4 < 900 ? <ThreeCircles linkId={"educations"} /> : ""}
+      </div>
+      <h2 className="section-header px-4 text-white  mb-4">Educations</h2>
       <Educations />
-      <div ref={ref5}>{scrollPos5 < 900 ? <ThreeCircles linkId={"contact"} /> : ""}</div>
-      <h2 className="section-header ms-4 text-white">Contact</h2>
+      <div id="contact" ref={ref5} className="link-id-tag">
+        {scrollPos5 < 900 ? <ThreeCircles linkId={"contact"} /> : ""}
+      </div>
+      <h2 className="section-header px-4 text-white  mb-4">Contact</h2>
       <Contact />
-      <div ref={ref6}>{scrollPos6 < 900 ? <ThreeCircles /> : ""}</div>
+      {/* <div ref={ref6} className="link-id-tag">
+        {scrollPos6 < 900 ? <ThreeCircles /> : ""}
+      </div> */}
+      <ThreeCircles />
       <Footer />
     </div>
   );

@@ -17,11 +17,14 @@ const Contact = () => {
   };
 
   const ref1 = useRef(null);
+  const ref2 = useRef(null);
   const [scrollPos1, setScrollPos1] = useState(0);
+  const [scrollPos2, setScrollPos2] = useState(0);
 
   // Sayfa scroll edildiğinde pozisyonu güncelle
   const handleScroll = () => {
     setScrollPos1(ref1.current.getBoundingClientRect().top);
+    setScrollPos2(ref2.current.getBoundingClientRect().top);
   };
 
   // Scroll olay dinleyicisini ekleme
@@ -34,9 +37,9 @@ const Contact = () => {
   }, []);
 
   return (
-    <div ref={ref1} className="contact-container container">
-      {scrollPos1 < 900 ? (
-        <>
+    <div className="contact-container container">
+      <div ref={ref1} className="form-div">
+        {scrollPos1 < 900 ? (
           <motion.form
             onSubmit={sendEmail}
             variants={{
@@ -89,6 +92,12 @@ const Contact = () => {
               </button>
             </div>
           </motion.form>
+        ) : (
+          ""
+        )}
+      </div>
+      <div ref={ref2} className="touch-div">
+        {scrollPos2 < 900 ? (
           <motion.div
             className="touch-me"
             variants={{
@@ -137,10 +146,10 @@ const Contact = () => {
               </div>
             </div>
           </motion.div>
-        </>
-      ) : (
-        ""
-      )}
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
 };

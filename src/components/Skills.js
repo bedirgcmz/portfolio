@@ -40,7 +40,7 @@ const Skills = () => {
   }, []);
   return (
     <>
-      <div ref={ref1}>
+      <div ref={ref1} style={{ minHeight: "770px" }}>
         {scrollPos1 < 900 ? (
           <motion.div
             className="prof-skills-container"
@@ -63,7 +63,7 @@ const Skills = () => {
         )}
       </div>
       <hr className="w-75" />
-      <div ref={ref2}>
+      <div ref={ref2} style={{ minHeight: "770px" }}>
         {scrollPos2 < 900 ? (
           <motion.div
             className="pers-skills-container"

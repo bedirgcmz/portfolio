@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import "./Swiper.css";
 
-export default () => {
+export default ({ fromIndex, toIndex }) => {
   const [screenSize, setScreenSize] = useState(3);
 
   useEffect(() => {
@@ -50,38 +50,44 @@ export default () => {
       autoplay={true}
       className="mySwiper"
     >
-      {projectData.map((project) => (
-        <SwiperSlide>
-          <div className="my-card m-auto ">
-            <div className="card-left-content">
-              <img className="card-img" src={project.image} />
-              <div className="line-and-cirkle-container">
-                <div className="one">
-                  <div className="l-line line"></div>
-                  <div className="l-circle circle"></div>
+      {projectData
+        .filter((prj, index) => index >= fromIndex && index <= toIndex)
+        .map((project, index) => (
+          <SwiperSlide key={project.id}>
+            <div className="my-card m-auto ">
+              <div className="card-left-content">
+                <img className="card-img" src={project.image} alt="Project demo" />
+                <div className="line-and-cirkle-container">
+                  <div className="one">
+                    <div className="l-line line"></div>
+                    <div className="l-circle circle"></div>
+                  </div>
+                  <p className="m-0">{index + 1 + fromIndex}</p>
+                  <div className="two">
+                    <div className="r-circle circle"></div>
+                    <div className="r-line line"></div>
+                  </div>
                 </div>
-                <p className="m-0">{project.id + 1}</p>
-                <div className="two">
-                  <div className="r-circle circle"></div>
-                  <div className="r-line line"></div>
+              </div>
+              <h6 className="project-title m-0">{project.project_name}</h6>
+              <div className="card-right-content">
+                <p className="project-info">{project.info}</p>
+                <div className="d-flex justify-content-between">
+                  <a href={project.link} className="see-demo me-2 btn41-43 btn-41" target="_blank">
+                    See demo
+                  </a>
+                  <a
+                    href={project.github_link}
+                    className="go-github btn41-43 btn-42"
+                    target="_blank"
+                  >
+                    Go Github
+                  </a>
                 </div>
               </div>
             </div>
-            <h6 className="project-title m-0">{project.project_name}</h6>
-            <div className="card-right-content">
-              <p className="project-info">{project.info}</p>
-              <div className="d-flex justify-content-between">
-                <a href={project.link} className="see-demo me-2 btn41-43 btn-41" target="_blank">
-                  See demo
-                </a>
-                <a href={project.github_link} className="go-github btn41-43 btn-42" target="_blank">
-                  Go Github
-                </a>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-      ))}
+          </SwiperSlide>
+        ))}
     </Swiper>
   );
 };

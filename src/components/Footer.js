@@ -11,11 +11,11 @@ const Footer = () => {
   return (
     <footer className="footer">
       <a onClick={scrollToTop} className="back-top">
-        <span>Back top </span>
+        <span>Back Top </span>
         <span>
           <i class="fa-solid fa-chevron-right"></i>
-          <i class="fa-solid fa-chevron-right"></i>
-          <i class="fa-solid fa-chevron-right"></i>
+          <i class="fa-solid fa-chevron-right" style={{ opacity: 0.7 }}></i>
+          <i class="fa-solid fa-chevron-right" style={{ opacity: 0.4 }}></i>
         </span>
       </a>
       <div className="footer-left-side">

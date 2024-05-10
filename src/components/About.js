@@ -3,6 +3,7 @@ import "./About.css";
 import "./Download.css";
 import aboutImg from "../images/about_img.png";
 import { motion } from "framer-motion";
+import BedirGCv from "../documents/Bedir_Gocmez_Cv.pdf";
 
 const About = () => {
   const fromLeft = {
@@ -44,8 +45,7 @@ const About = () => {
     },
   };
   return (
-    <div id="about" className="about-margin-top">
-      {/* <h2 className='ms-4 text-white'>About Me</h2> */}
+    <div id="about" className="about-margin-top" style={{ minHeight: "500px" }}>
       <div className="about-container row">
         <div className="touch-me-container col-md-1">
           <span className="d-inline-block touch">Touch</span>
@@ -91,14 +91,15 @@ const About = () => {
             initial="hidden"
             animate="visible"
           >
-            I am an ambitious Developer with a passion for software and technology. I have been
-            improving myself in the field of informatics for 2 years. I continued learning on many
-            platforms and learned different programming languages. I also completed a course called
-            "Full Stack Web Development". Now I have started the "Frontend / App Developer" training
-            at Högskola. A few years ago, I developed web-based applications with my newly acquired
-            skills and I am able to improve myself in front-end and back-end disciplines. I am very
-            keen to learn new technologies and especially artificial intelligence. I think I am very
-            flexible and agile in team work.
+            I have been working in the IT field since 2020 and have completed numerous courses in
+            this domain. Initially, I enrolled in courses through Udemy. Then, in 2022, I
+            successfully completed an 11-month FullStack Web Developer program offered by HiCoders.
+            Currently, I am pursuing a Frontend/App Developer course at Changemaker Education
+            Yrkeshögskola in Sweden. I am passionate about working towards my goals. <br /> <br />
+            With the new skills I've acquired, I developed web-based applications for some clients.
+            I'm still working on projects for some clients. I'm very eager to learn new
+            technologies, especially artificial intelligence. I think I'm very flexible and agile in
+            teamwork. I've always enjoyed taking responsibility.
           </motion.p>
         </div>
         {/* <div className='my-img-container col-5  col-sm-12 col-'> */}
@@ -112,7 +113,12 @@ const About = () => {
           ></motion.img>
         </div>
       </div>
-      <a href="#" target="" className="download-cv-bottom float-right">
+      <a
+        href={BedirGCv}
+        target="_blank"
+        className="download-cv-bottom float-right"
+        download="Bedir-Gocmez-Cv.pdf"
+      >
         <span>
           <i class="fa-solid fa-download pe-2"></i>Download CV
         </span>

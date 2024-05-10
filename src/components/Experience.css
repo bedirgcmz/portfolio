@@ -1,3 +1,7 @@
+.experience-top-div {
+  min-height: 900px;
+}
+
 .experience-container {
   margin: 0 5%;
   justify-content: center;
@@ -118,6 +122,10 @@
   }
 }
 @media only screen and (max-width: 600px) {
+  .experience-top-div {
+    min-height: 1329px;
+  }
+
   .experience-container {
     flex-direction: column;
     position: relative;

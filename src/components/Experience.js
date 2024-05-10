@@ -41,7 +41,7 @@ const Experience = () => {
   };
 
   return (
-    <div ref={ref1}>
+    <div ref={ref1} className="experience-top-div">
       {scrollPos1 < 900 ? (
         <section className="experience-container d-flex">
           <div className="exp-left-cards">

@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import "./Projects.css";
 import "./hovers.css";
-import projectData from "../data/ProjectsData.json";
 import { motion } from "framer-motion";
 import Swiper from "./Swiper.js";
 
-const Projects = () => {
+const Projects = ({ fromIndex, toIndex }) => {
   const ref1 = useRef(null);
 
   const [scrollPos1, setScrollPos1] = useState(0);
@@ -25,7 +24,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div ref={ref1}>
+    <div ref={ref1} style={{ minHeight: "490px" }}>
       {scrollPos1 < 900 ? (
         <motion.section
           variants={{
@@ -39,7 +38,7 @@ const Projects = () => {
           initial="hidden"
           animate="visible"
         >
-          <Swiper />
+          <Swiper fromIndex={fromIndex} toIndex={toIndex} />
         </motion.section>
       ) : (
         ""
