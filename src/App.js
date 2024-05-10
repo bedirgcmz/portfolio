@@ -72,7 +72,9 @@ function App() {
       <div id="contact" ref={ref5} className="link-id-tag">
         {scrollPos5 < 900 ? <ThreeCircles linkId={"contact"} /> : ""}
       </div>
-      <h2 className="section-header px-4 text-white  mb-4">Contact</h2>
+      <h2 id="contactt" className="section-header px-4 text-white  mb-4">
+        Contact
+      </h2>
       <Contact />
       {/* <div ref={ref6} className="link-id-tag">
         {scrollPos6 < 900 ? <ThreeCircles /> : ""}

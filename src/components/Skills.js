@@ -63,7 +63,7 @@ const Skills = () => {
         )}
       </div>
       <hr className="w-75" />
-      <div ref={ref2} style={{ minHeight: "770px" }}>
+      <div ref={ref2} style={{ minHeight: window.innerWidth < 600 ? "550px" : "770px" }}>
         {scrollPos2 < 900 ? (
           <motion.div
             className="pers-skills-container"

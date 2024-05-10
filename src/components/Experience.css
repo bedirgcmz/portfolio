@@ -60,13 +60,13 @@
   color: gray;
 }
 .exp-left-cards .card:last-child {
-  margin-top: 45%;
+  margin-top: 178px;
 }
 .exp-right-cards .card:first-child {
-  margin-top: 53%;
+  margin-top: 210px;
 }
 .exp-right-cards .card:last-child {
-  margin-top: 36%;
+  margin-top: 146px;
 }
 .experience-container .card-header {
   background-color: #ff7d00;
@@ -100,25 +100,25 @@
 @media only screen and (max-width: 992px) {
   .experience-container .card {
     width: 100%;
-    height: 260px;
+    height: 270px;
   }
   .exp-right-cards .card:last-child {
-    margin-top: 28%;
+    margin-top: 83px;
   }
   .exp-right-cards .card:first-child {
-    margin-top: 64%;
+    margin-top: 213px;
   }
   .experience-container .card-hover {
-    height: 260px;
+    height: 270px;
   }
 }
 @media only screen and (max-width: 750px) {
   .experience-container .card {
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
   }
   .experience-container .card-hover {
-    height: 300px;
+    /* height: 300px; */
   }
 }
 @media only screen and (max-width: 600px) {
@@ -132,10 +132,10 @@
     justify-content: flex-start;
   }
   .experience-container .card {
-    height: 278px;
+    /* height: 270px; */
   }
   .experience-container .card-hover {
-    height: 278px;
+    /* height: 270px; */
   }
 
   .exp-left-cards,
@@ -168,15 +168,15 @@
     margin: 0 25px 0 0;
   }
   .exp-left-cards .card:last-child {
-    margin-top: 21%;
+    margin-top: 60px;
   }
   .exp-right-cards .card:first-child {
-    margin-top: 18%;
+    margin-top: 70px;
   }
   .exp-right-cards .card:last-child {
-    margin-top: 21%;
+    margin-top: 74px;
   }
   .exp-line {
-    height: 1285px;
+    height: 1300px;
   }
 }
