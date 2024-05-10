@@ -24,7 +24,7 @@ const Footer = () => {
       </div>
       <div className="vertical-line"></div>
       <div className="footer-right-side">
-        <a href="#about" className="footer-link">
+        <a href="/#" className="footer-link">
           About
         </a>
         <a href="#project" className="footer-link">
