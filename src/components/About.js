@@ -45,7 +45,11 @@ const About = () => {
     },
   };
   return (
-    <div id="about" className="about-margin-top" style={{ minHeight: "500px" }}>
+    <div
+      id="about"
+      className="about-margin-top"
+      style={{ minHeight: window.innerWidth < 768 ? "860px" : "550px" }}
+    >
       <div className="about-container row">
         <div className="touch-me-container col-md-1">
           <span className="d-inline-block touch">Touch</span>

@@ -45,6 +45,28 @@ function App() {
   }, []);
 
   return (
+    // <div className="App">
+    //   <CustomNavbar />
+    //   <About />
+    //   <ThreeCircles linkId={"projects"} />
+    //   <h2 className="section-header px-4 text-white">My Projects </h2>
+    //   <Projects fromIndex={0} toIndex={9} />
+    //   <Projects fromIndex={10} toIndex={30} />
+    //   <ThreeCircles linkId={"skills"} />
+    //   <h2 className="section-header px-4 text-white">My Skills</h2>
+    //   <Skills />
+    //   <ThreeCircles linkId={"experiences"} />
+    //   <h2 className="section-header px-4 text-white mb-4">Experiences</h2>
+    //   <Experience />
+    //   <ThreeCircles linkId={"educations"} />
+    //   <h2 className="section-header px-4 text-white  mb-4">Educations</h2>
+    //   <Educations />
+    //   <ThreeCircles linkId={"contact"} />
+    //   <h2 className="section-header px-4 text-white  mb-4">Contact</h2>
+    //   <Contact />
+    //   <ThreeCircles />
+    //   <Footer />
+    // </div>
     <div className="App">
       <CustomNavbar />
       <About />
@@ -72,13 +94,8 @@ function App() {
       <div id="contact" ref={ref5} className="link-id-tag">
         {scrollPos5 < 900 ? <ThreeCircles linkId={"contact"} /> : ""}
       </div>
-      <h2 id="contactt" className="section-header px-4 text-white  mb-4">
-        Contact
-      </h2>
+      <h2 className="section-header px-4 text-white  mb-4">Contact</h2>
       <Contact />
-      {/* <div ref={ref6} className="link-id-tag">
-        {scrollPos6 < 900 ? <ThreeCircles /> : ""}
-      </div> */}
       <ThreeCircles />
       <Footer />
     </div>

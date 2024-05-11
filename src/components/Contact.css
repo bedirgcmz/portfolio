@@ -1,13 +1,13 @@
 .contact-container {
   background-color: #004046;
   max-width: 750px;
+  height: 480px;
   width: 90%;
   color: white;
   border-radius: 20px;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  height: 450px;
   justify-content: center;
   position: relative;
 
@@ -174,8 +174,8 @@ textarea.form-control {
 @media only screen and (max-width: 600px) {
   .contact-container {
     flex-direction: column-reverse;
-    min-height: 750px;
-    height: 744px;
+    height: 780px;
+
     .touch-div {
       width: 50%;
       max-width: 90%;

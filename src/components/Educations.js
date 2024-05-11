@@ -21,7 +21,7 @@ const Educations = () => {
     };
   }, []);
   return (
-    <div ref={ref1} style={{ minHeight: "350px" }}>
+    <div ref={ref1} style={{ height: "370px" }}>
       {scrollPos1 < 900 ? (
         <motion.div
           class="accordion educations-container"

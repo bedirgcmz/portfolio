@@ -21,7 +21,7 @@ const ThreeCircles = ({ linkId }) => {
     },
   };
   return (
-    <div id={"aa"} className="three-circles-container">
+    <div id={linkId} className="three-circles-container">
       <motion.div
         className="firs-circle m-5"
         variants={fromLeft}

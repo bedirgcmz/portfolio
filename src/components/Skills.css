@@ -171,8 +171,14 @@ hr {
   /* left: 41%; */
 }
 
+.prof-top-div {
+  height: 732px;
+}
 /** Media queries**/
 @media only screen and (min-width: 1024px) {
+  .prof-top-div {
+    height: 795px;
+  }
   .html {
     top: 266px;
     left: 13%;
@@ -245,6 +251,9 @@ hr {
   }
 }
 @media only screen and (max-width: 992px) {
+  .prof-top-div {
+    height: 732px;
+  }
   .skills-wheel {
     width: 32%;
     margin-top: -20px;
@@ -332,6 +341,9 @@ hr {
 }
 
 @media only screen and (max-width: 600px) {
+  .prof-top-div {
+    height: 660px;
+  }
   hr {
     margin: 46px auto;
   }

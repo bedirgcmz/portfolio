@@ -24,7 +24,7 @@ const Projects = ({ fromIndex, toIndex }) => {
   }, []);
 
   return (
-    <div ref={ref1} style={{ minHeight: "490px" }}>
+    <div ref={ref1} style={{ height: "500px" }}>
       {scrollPos1 < 900 ? (
         <motion.section
           variants={{
