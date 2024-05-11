@@ -18,6 +18,10 @@
 .skills-wheel {
   width: 20%;
 }
+.skill-img-container {
+  width: 100%;
+  text-align: center;
+}
 hr {
   color: #33bbc5;
   border: 3px solid;
@@ -350,10 +354,10 @@ hr {
   .pers-skills-container {
     padding-top: 150px;
   }
-  .prof-skills-container .skills-wheel {
+  .skill-img-container .skills-wheel {
     margin-top: 28px;
   }
-  .pers-skills-container .skills-wheel {
+  .skill-img-container .skills-wheel {
     margin-top: 4px;
   }
   .skill {

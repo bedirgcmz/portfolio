@@ -16,75 +16,74 @@ import mysql from "../images/icons/mysql.png";
 import nodejs from "../images/icons/nodejs.jpg";
 import react from "../images/icons/react.png";
 import expressjs from "../images/icons/expressjs.png";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 const Skills = () => {
   const ref1 = useRef(null);
   const ref2 = useRef(null);
-  const [scrollPos1, setScrollPos1] = useState(0);
-  const [scrollPos2, setScrollPos2] = useState(0);
+  const isInWiew = useInView(ref1, { once: true });
+  const isInWiew2 = useInView(ref2, { once: true });
 
-  // Sayfa scroll edildiğinde pozisyonu güncelle
-  const handleScroll = () => {
-    setScrollPos1(ref1.current.getBoundingClientRect().top);
-    setScrollPos2(ref2.current.getBoundingClientRect().top);
-  };
+  const controls1 = useAnimation();
+  const controls2 = useAnimation();
 
-  // Scroll olay dinleyicisini ekleme
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    if (isInWiew) {
+      controls1.start("visible");
+    }
+    if (isInWiew2) {
+      controls2.start("visible");
+    }
+  }, [isInWiew, isInWiew2]);
   return (
     <>
-      <div className="prof-top-div" ref={ref1}>
-        {scrollPos1 < 900 ? (
-          <motion.div
-            className="prof-skills-container"
-            variants={{
-              hidden: { opacity: 0, scale: 0 },
-              visible: {
-                opacity: 1,
-                scale: 1,
-                transition: { type: "spring", delay: 0.3, duration: 1.6 },
-              },
-            }}
-            initial="hidden"
-            animate="visible"
-          >
+      <section className="prof-top-div">
+        <div className="prof-top-div">
+          <div className="prof-skills-container">
             <ProfSkills />
-            <img className="prof-skill-wheel skills-wheel " src={skills1}></img>
-          </motion.div>
-        ) : (
-          ""
-        )}
-      </div>
+            <div ref={ref1} className="skill-img-container">
+              <motion.img
+                className="prof-skill-wheel skills-wheel "
+                src={skills1}
+                variants={{
+                  hidden: { opacity: 0, scale: 0 },
+                  visible: {
+                    opacity: 1,
+                    scale: 1,
+                    transition: { type: "spring", delay: 0.3, duration: 2.2 },
+                  },
+                }}
+                initial="hidden"
+                animate={controls1}
+              ></motion.img>
+            </div>
+          </div>
+        </div>
+      </section>
       <hr className="w-75" />
-      <div ref={ref2} style={{ height: window.innerWidth < 600 ? "450px" : "700px" }}>
-        {scrollPos2 < 900 ? (
-          <motion.div
-            className="pers-skills-container"
-            variants={{
-              hidden: { opacity: 0, scale: 0 },
-              visible: {
-                opacity: 1,
-                scale: 1,
-                transition: { type: "spring", delay: 0.3, duration: 1.6 },
-              },
-            }}
-            initial="hidden"
-            animate="visible"
-          >
+      <section style={{ height: window.innerWidth < 600 ? "450px" : "700px" }}>
+        <div>
+          <div className="pers-skills-container">
             <PersSkills />
-            <img className="pers-skill-wheel skills-wheel " src={skills2}></img>
-          </motion.div>
-        ) : (
-          ""
-        )}
-      </div>
+            <div ref={ref2} className="skill-img-container">
+              <motion.img
+                className="pers-skill-wheel skills-wheel "
+                src={skills2}
+                variants={{
+                  hidden: { opacity: 0, scale: 0 },
+                  visible: {
+                    opacity: 1,
+                    scale: 1,
+                    transition: { type: "spring", delay: 0.3, duration: 2.2 },
+                  },
+                }}
+                initial="hidden"
+                animate={controls2}
+              ></motion.img>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

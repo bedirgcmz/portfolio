@@ -26,7 +26,7 @@ const About = () => {
   };
   const fromTop = {
     hidden: {
-      y: "-100vh",
+      y: -70,
       opacity: 0,
     },
     visible: {
@@ -37,9 +37,11 @@ const About = () => {
   };
   const fromBottom = {
     hidden: {
-      y: "100vh",
+      opacity: 0,
+      y: -70,
     },
     visible: {
+      opacity: 1,
       y: 0,
       transition: { type: "spring", delay: 0.3, duration: 1.6 },
     },
@@ -48,14 +50,14 @@ const About = () => {
     <div
       id="about"
       className="about-margin-top"
-      style={{ minHeight: window.innerWidth < 768 ? "860px" : "550px" }}
+      style={{ height: window.innerWidth < 768 ? "860px" : "550px" }}
     >
       <div className="about-container row">
         <div className="touch-me-container col-md-1">
           <span className="d-inline-block touch">Touch</span>
           <motion.span
             className="d-inline-block line-1"
-            variants={fromBottom}
+            variants={fromLeft}
             initial="hidden"
             animate="visible"
           ></motion.span>
@@ -73,13 +75,12 @@ const About = () => {
           <span className="d-inline-block circle-2"></span>
           <motion.span
             className="d-inline-block line-2"
-            variants={fromTop}
+            variants={fromRight}
             initial="hidden"
             animate="visible"
           ></motion.span>
           <span className="d-inline-block me">me</span>
         </div>
-        {/* <div className='about-me-text-container col-6 col-sm-12 col-'> */}
         <div className="about-me-text-container col-12 col-sm-12 col-md-6">
           <motion.h1
             className="my-fullname text-center"
@@ -106,12 +107,18 @@ const About = () => {
             teamwork. I've always enjoyed taking responsibility.
           </motion.p>
         </div>
-        {/* <div className='my-img-container col-5  col-sm-12 col-'> */}
         <div className="my-img-container col-12  col-sm-12 col-md-5">
           <motion.img
             className="about-img"
             src={aboutImg}
-            variants={fromBottom}
+            variants={{
+              hidden: { opacity: 0, scale: 0 },
+              visible: {
+                opacity: 1,
+                scale: 1,
+                transition: { type: "spring", delay: 0.3, duration: 1.6 },
+              },
+            }}
             initial="hidden"
             animate="visible"
           ></motion.img>

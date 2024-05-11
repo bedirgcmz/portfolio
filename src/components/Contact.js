@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 import emailjs from "emailjs-com";
 import "./Contact.css";
 import "./hovers.css";
@@ -18,40 +18,25 @@ const Contact = () => {
 
   const ref1 = useRef(null);
   const ref2 = useRef(null);
-  const [scrollPos1, setScrollPos1] = useState(0);
-  const [scrollPos2, setScrollPos2] = useState(0);
+  const isInWiew = useInView(ref1, { once: true });
+  const isInWiew2 = useInView(ref2, { once: true });
 
-  // Sayfa scroll edildiğinde pozisyonu güncelle
-  const handleScroll = () => {
-    // setScrollPos1(ref1.current.getBoundingClientRect().top);
-    // setScrollPos2(ref2.current.getBoundingClientRect().top);
-  };
+  const controls1 = useAnimation();
+  const controls2 = useAnimation();
 
-  // Scroll olay dinleyicisini ekleme
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    if (isInWiew) {
+      controls1.start("visible");
+    }
+    if (isInWiew2) {
+      controls2.start("visible");
+    }
+  }, [isInWiew, isInWiew2]);
 
   return (
-    <div className="contact-container container">
+    <section className="contact-container container">
       <div ref={ref1} className="form-div">
-        <motion.form
-          onSubmit={sendEmail}
-          variants={{
-            hidden: { opacity: 0, x: "-100vw" },
-            visible: {
-              opacity: 1,
-              x: 0,
-              transition: { type: "spring", delay: 0.3, duration: 1.6 },
-            },
-          }}
-          initial="hidden"
-          animate="visible"
-        >
+        <form onSubmit={sendEmail}>
           <h4 className="text-center contact-me-header">Contact Me</h4>
           <div className="input-area mb-3">
             <i className="form-icon fa-solid fa-user"></i>
@@ -81,35 +66,29 @@ const Contact = () => {
               required
               placeholder="Write your messages"
             ></textarea>
-            <button
+            <motion.button
               id="send-button"
               name="submit"
               type="submit"
               className="form-control glow-on-hover submit my-2"
+              variants={{
+                hidden: { opacity: 0, y: "100vw" },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "spring", delay: 0.3, duration: 1.6 },
+                },
+              }}
+              initial="hidden"
+              animate={controls1}
             >
               Gönder
-            </button>
+            </motion.button>
           </div>
-        </motion.form>
-        {/* {scrollPos1 < 1140 ? (
-        ) : (
-          ""
-        )} */}
+        </form>
       </div>
-      <div ref={ref2} className="touch-div">
-        <motion.div
-          className="touch-me"
-          variants={{
-            hidden: { opacity: 0, x: "100vw" },
-            visible: {
-              opacity: 1,
-              x: 0,
-              transition: { type: "spring", delay: 0.3, duration: 1.6 },
-            },
-          }}
-          initial="hidden"
-          animate="visible"
-        >
+      <div className="touch-div">
+        <div className="touch-me">
           <h4 className="text-center">Touch Me</h4>
           <div className="touch-me-info">
             <div className="info-icons mb-4">
@@ -124,33 +103,55 @@ const Contact = () => {
               <i className="fa-solid me-2 fa-phone-volume"></i>076 963 73 90
             </div>
           </div>
-          <div className="mb-2 touch-me-icons">
-            <div class="touch-me-icon-container">
-              <a
-                href="https://www.linkedin.com/in/bedirgocmez/"
-                class="touch-me-icon icon-fill"
-                target="_blank"
+          <div ref={ref2} className="mb-2 touch-me-icons">
+            <>
+              <motion.div
+                class="touch-me-icon-container"
+                variants={{
+                  hidden: { opacity: 0, x: "-100vw" },
+                  visible: {
+                    opacity: 1,
+                    x: 0,
+                    transition: { type: "spring", delay: 0.3, duration: 1.6 },
+                  },
+                }}
+                initial="hidden"
+                animate={controls2}
               >
-                <i className="fa-brands fa-linkedin"></i>
-              </a>
-            </div>
-            <div class="touch-me-icon-container">
-              <a
-                href="https://github.com/bedirgcmz"
-                class="touch-me-icon icon-fill"
-                target="_blank"
+                <a
+                  href="https://www.linkedin.com/in/bedirgocmez/"
+                  class="touch-me-icon icon-fill"
+                  target="_blank"
+                >
+                  <i className="fa-brands fa-linkedin"></i>
+                </a>
+              </motion.div>
+              <motion.div
+                class="touch-me-icon-container"
+                variants={{
+                  hidden: { opacity: 0, x: "-100vw" },
+                  visible: {
+                    opacity: 1,
+                    x: 0,
+                    transition: { type: "spring", delay: 0.3, duration: 1.6 },
+                  },
+                }}
+                initial="hidden"
+                animate={controls2}
               >
-                <i className="fa-brands fa-github"></i>
-              </a>
-            </div>
+                <a
+                  href="https://github.com/bedirgcmz"
+                  class="touch-me-icon icon-fill"
+                  target="_blank"
+                >
+                  <i className="fa-brands fa-github"></i>
+                </a>
+              </motion.div>
+            </>
           </div>
-        </motion.div>
-        {/* {scrollPos1 < 1140 ? (
-        ) : (
-          ""
-        )} */}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,51 +1,52 @@
 import { useEffect, useRef, useState } from "react";
 import "./Experience.css";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 const Experience = () => {
   const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const isInWiew = useInView(ref1, { once: true });
+  const isInWiew2 = useInView(ref2, { once: true });
 
-  const [scrollPos1, setScrollPos1] = useState(0);
+  const controls1 = useAnimation();
+  const controls2 = useAnimation();
 
-  // Sayfa scroll edildiğinde pozisyonu güncelle
-  const handleScroll = () => {
-    setScrollPos1(ref1.current.getBoundingClientRect().top);
-  };
-
-  // Scroll olay dinleyicisini ekleme
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    if (isInWiew) {
+      controls1.start("visible");
+    }
+    if (isInWiew2) {
+      controls2.start("visible");
+    }
+  }, [isInWiew, isInWiew2]);
 
   const fromLeft = {
     hidden: {
-      x: "-100vw",
+      y: -75,
     },
     visible: {
-      x: 0,
-      transition: { type: "spring", delay: 0.3, duration: 1.6 },
+      y: 0,
+      transition: { type: "spring", delay: 0.3, duration: 0.7, ease: "easeIn" },
     },
   };
   const fromRight = {
     hidden: {
-      x: "100vw",
+      opacity: 0,
+      y: 75,
     },
     visible: {
-      x: 0,
-      transition: { type: "spring", delay: 0.3, duration: 1.6 },
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", delay: 0.3, duration: 0.7, ease: "easeIn" },
     },
   };
 
   return (
-    <div ref={ref1} className="experience-top-div">
-      {scrollPos1 < 900 ? (
-        <section className="experience-container d-flex">
+    <section className="experience-top-div">
+      <div className="experience-top-div">
+        <section ref={ref1} className="experience-container d-flex">
           <div className="exp-left-cards">
-            <motion.div class="card mb-3" variants={fromLeft} initial="hidden" animate="visible">
+            <motion.div class="card mb-3" variants={fromLeft} initial="hidden" animate={controls1}>
               <div className="card-hover"></div>
               <div class="card-header">
                 <i className="fa-solid fa-building pe-3"></i> Freelance
@@ -61,7 +62,7 @@ const Experience = () => {
               </div>
               <div className="exp-date">07.2022 - Currently</div>
             </motion.div>
-            <motion.div class="card mb-3" variants={fromLeft} initial="hidden" animate="visible">
+            <motion.div class="card mb-3" variants={fromLeft} initial="hidden" animate={controls1}>
               <div className="card-hover"></div>
               <div class="card-header">
                 <i className="fa-solid fa-building pe-3"></i> Toros Primary School
@@ -91,8 +92,8 @@ const Experience = () => {
             <i class="exp-arrow third-arrow fa-solid fa-play"></i>
             <i class="exp-arrow fourth-arrow fa-solid fa-play"></i>
           </div>
-          <div className="exp-right-cards">
-            <motion.div class="card mb-3" variants={fromRight} initial="hidden" animate="visible">
+          <div ref={ref2} className="exp-right-cards">
+            <motion.div class="card mb-3" variants={fromRight} initial="hidden" animate={controls2}>
               <div className="card-hover"></div>
               <div class="card-header">
                 <i className="fa-solid fa-building pe-3"></i>MEM Educational Institutions
@@ -109,7 +110,7 @@ const Experience = () => {
               </div>
               <div className="exp-date">08.2018 - 09.2020</div>
             </motion.div>
-            <motion.div class="card mb-3" variants={fromRight} initial="hidden" animate="visible">
+            <motion.div class="card mb-3" variants={fromRight} initial="hidden" animate={controls2}>
               <div className="card-hover"></div>
               <div class="card-header">
                 <i className="fa-solid fa-building pe-3"></i>Rainbow Educational Institutions
@@ -125,10 +126,8 @@ const Experience = () => {
             </motion.div>
           </div>
         </section>
-      ) : (
-        ""
-      )}
-    </div>
+      </div>
+    </section>
   );
 };
 

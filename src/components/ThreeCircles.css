@@ -1,32 +1,40 @@
 .three-circles-container {
-    width: 100%;
-    padding: 30px;
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  padding: 30px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.firs-circle{
-width: 30px;
-height: 30px;
-border-radius: 50%;
-background-color: #FF7D00;
+.three-ciclesr-section {
+  height: 206px;
 }
-.second-circle{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #33BBC5;
+.firs-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ff7d00;
 }
-.third-circle{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #FF7D00;
+.second-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #33bbc5;
+}
+.third-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ff7d00;
 }
 
 @media only screen and (max-width: 600px) {
-    .firs-circle, .second-circle, .third-circle {
-        margin: 0 2rem !important;
-    }
+  .firs-circle,
+  .second-circle,
+  .third-circle {
+    margin: 0 2rem !important;
+  }
+  .three-ciclesr-section {
+    height: 110px;
+  }
 }

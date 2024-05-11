@@ -20,7 +20,7 @@ const CustomNavbar = () => {
         />
         <div className="name-and-title ms-3 me-5 text-center">
           <p className="name text-white">Bedir Gocmez</p>
-          <p className="title">Fullstack Web Developer</p>
+          <p className="title">Frontend Web Developer</p>
         </div>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
