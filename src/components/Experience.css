@@ -1,5 +1,6 @@
 .experience-top-div {
   height: 900px;
+  padding: 20px 0;
 }
 
 .experience-container {
@@ -125,7 +126,7 @@
 
 @media only screen and (max-width: 600px) {
   .experience-top-div {
-    height: 1335px;
+    height: 1370px;
   }
 
   .experience-container {

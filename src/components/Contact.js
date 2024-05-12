@@ -34,7 +34,7 @@ const Contact = () => {
   }, [isInWiew, isInWiew2]);
 
   return (
-    <section className="contact-container container">
+    <section className="contact-container container" style={{ overflow: "hidden" }}>
       <div ref={ref1} className="form-div">
         <form onSubmit={sendEmail}>
           <h4 className="text-center contact-me-header">Contact Me</h4>
@@ -129,7 +129,7 @@ const Contact = () => {
               <motion.div
                 class="touch-me-icon-container"
                 variants={{
-                  hidden: { opacity: 0, x: "-100vw" },
+                  hidden: { opacity: 0, x: "100vw" },
                   visible: {
                     opacity: 1,
                     x: 0,

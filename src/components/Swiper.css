@@ -12,7 +12,7 @@
   border-radius: 10px;
   color: white;
   box-shadow: #000 0px 3px 8px;
-  transition: all ease 0.4s;
+  /* transition: all ease 0.4s; */
   max-width: 330px;
   min-height: 410px;
 }

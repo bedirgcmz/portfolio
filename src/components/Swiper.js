@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import projectData from "../data/ProjectsData.json";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 // Import Swiper styles
 import "swiper/css";
@@ -54,7 +55,11 @@ export default ({ fromIndex, toIndex }) => {
         .filter((prj, index) => index >= fromIndex && index <= toIndex)
         .map((project, index) => (
           <SwiperSlide key={project.id}>
-            <div className="my-card m-auto ">
+            <motion.div
+              className="my-card m-auto "
+              whileHover={{ scale: 1.07 }}
+              transition={{ type: "spring", stiffness: 300, damping: 7 }}
+            >
               <div className="card-left-content">
                 <img className="card-img" src={project.image} alt="Project demo" />
                 <div className="line-and-cirkle-container">
@@ -85,7 +90,7 @@ export default ({ fromIndex, toIndex }) => {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </SwiperSlide>
         ))}
     </Swiper>

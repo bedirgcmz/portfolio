@@ -63,7 +63,7 @@ const Educations = () => {
   }, [isInWiew]);
 
   return (
-    <section style={{ height: "480px" }}>
+    <section style={{ height: "480px", overflow: "hidden" }}>
       <div ref={ref1}>
         <div class="accordion educations-container" id="accordionExample">
           {myEducations.map((edu, index) => (

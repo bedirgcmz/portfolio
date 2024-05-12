@@ -10,7 +10,7 @@ import BedirGCv from "../documents/Bedir_Gocmez_Cv.pdf";
 const CustomNavbar = () => {
   return (
     <Navbar className="px-3" expand="lg" fixed="top">
-      <Navbar.Brand className="brand-container" href="#about">
+      <Navbar.Brand className="brand-container" href="/#">
         <img
           src={img1}
           width="40"

@@ -154,7 +154,12 @@ const ProfSkills = () => {
   return (
     <>
       {myProfSkills.map((skill, index) => (
-        <div key={index} className={`skill ${skill.class} hover-2`}>
+        <motion.div
+          key={index}
+          className={`skill ${skill.class} hover-2`}
+          whileHover={{ scale: 1.2 }}
+          transition={{ type: "spring", stiffness: 300, damping: 7 }}
+        >
           <img src={skill.img} className="skill-img"></img>
           <div className="skill-right-content">
             <div className="skill-name-container">
@@ -167,7 +172,7 @@ const ProfSkills = () => {
               </span>
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </>
   );
@@ -202,7 +207,12 @@ const PersSkills = () => {
   return (
     <>
       {myPersSkills.map((skill, index) => (
-        <div key={index} className={`skill ${skill.class} hover-2`}>
+        <motion.div
+          key={index}
+          className={`skill ${skill.class} hover-2`}
+          whileHover={{ scale: 1.2 }}
+          transition={{ type: "spring", stiffness: 300, damping: 7 }}
+        >
           <div className="skill-right-content">
             <div className="skill-name-container">
               <span className="skill-point me-2"></span>
@@ -216,7 +226,7 @@ const PersSkills = () => {
               </span>
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </>
   );

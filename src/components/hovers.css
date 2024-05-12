@@ -1,177 +1,145 @@
 #basic-navbar-nav a {
-    --s: 0.1em;   /* the thickness of the line */
-    --c: #FF7D00; /* the color */
-    
-    padding-bottom: var(--s);
-    background: 
-      linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
-      linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
-    -webkit-background-clip: text,padding-box;
-            background-clip: text,padding-box;
-    transition: 0.5s;
-  }
-  #basic-navbar-nav a:hover {
-    --_p: 100%;
-    color: #FF7D00;
-    transform: scale(1.1);
-  }
-  
-  /* project hover.. soldan gelen arka plan*/
-  /* .hover-2::before {
-    background: #15616D;
-    border-radius: 30px;
-    content: "";
-    inset: 0;
-    position: absolute;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.5s ease-in-out;
-    z-index: -1;
-    border-radius: 30px;
+  --s: 0.1em; /* the thickness of the line */
+  --c: #ff7d00; /* the color */
 
-  }
-  
-  .hover-2:hover::before {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
- 
-  .hover-2:hover {
-    box-shadow: #000 0px 0px 15px;
-    transform: scaleX(1.2);
-    transition: transform 0.6s;
-  } */
+  padding-bottom: var(--s);
+  background: linear-gradient(90deg, var(--c) 50%, #000 0) calc(100% - var(--_p, 0%)) / 200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.5s;
+}
+#basic-navbar-nav a:hover {
+  --_p: 100%;
+  color: #ff7d00;
+  transform: scale(1.1);
+}
 
-  .hover-2 {
-    transition: all 0.3s ease;
-    z-index: 1;
-  }
-    
-  .hover-2:after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    background: rgb(0, 115, 141);
-    transition: all 0.3s ease;
-    border-radius: 30px;
-  }
-  
-  .hover-2:hover:after {
-    top: 0;
-    height: 100%;
-  }
-  
-  /* .hover-2:active {
-    top: 2px;
-  } */
+.hover-2 {
+  /* transition: all 0.3s ease; */
+  z-index: 1;
+}
+
+.hover-2:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: rgb(0, 115, 141);
+  transition: all 0.3s ease;
+  border-radius: 30px;
+}
+
+.hover-2:hover:after {
+  top: 0;
+  height: 100%;
+}
 
 /** Hover 4**/
-  .hover-4 {
-    --c: #1095c1; /* the color */
-    --b: .1em;    /* border length*/
-    --d: 20px;    /* the cube depth */
-    
-    --_s: calc(var(--d) + var(--b));
-    
-    color: var(--c);
-    border: solid #0000;
-    border-width: var(--b) var(--b) var(--_s) var(--_s);
-    background:
-      conic-gradient(at left var(--d)  bottom var(--d),
-        #0000 90deg, rgb(255 255 255 /0.3) 0 225deg,rgb(255 255 255 /0.6) 0) border-box,
-      conic-gradient(at left var(--_s) bottom var(--_s),
-        #0000 90deg,var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b))  border-box;
-    transform: translate(calc(var(--d)/-1),var(--d));
-    clip-path: 
-      polygon(
-       var(--d) 0%, 
-       var(--d) 0%, 
-       100% 0%, 
-       100% calc(100% - var(--d)),
-       100% calc(100% - var(--d)),
-       var(--d) calc(100% - var(--d))
-      );
-    transition: 0.5s;
-  }
-  .hover-4:hover {
-    transform: translate(0,0);
-    clip-path: 
-      polygon(
-       0% var(--d), 
-       var(--d) 0%, 
-       100% 0%, 
-       100% calc(100% - var(--d)), 
-       calc(100% - var(--d)) 100%, 
-       0% 100%
-     );
-  }
-  .hover-5 {
-    --b: 0.1em;   /* the thickness of the line */
-    --c: #1095c1; /* the color */
-    
-    color: #0000;
-    padding-block: var(--b);
-    background: 
-      linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
-      linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
-    -webkit-background-clip: text,padding-box;
-            background-clip: text,padding-box;
-    transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
-  }
-  .hover-5:hover {
-    --_p: 100%;
-    --_s: .3s;
-  }
-  .hover-6 {
-    border: 8px solid;
-    border-image: repeating-linear-gradient(135deg,#F8CA00 0 10px,#E97F02 0 20px,#BD1550 0 30px) 8;
-    -webkit-mask: 
-      conic-gradient(from 180deg at top 8px right 8px, #0000 90deg,#000 0)
-       var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat,
-      conic-gradient(at bottom 8px left  8px,  #0000 90deg,#000 0)
-       0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat,
-      linear-gradient(#000 0 0) padding-box no-repeat;
-    transition: .3s, -webkit-mask-position .3s .3s;
-  }
-  .hover-6:hover {
-    --_i: 100%;
-    color: #CC333F;
-    transition: .3s, -webkit-mask-size .3s .3s;
-  }
-  
- .hover-7:after {
-    content: "";
-    position: absolute;
-    background-color: #FF7D00;
-    height: 2px;
-    left: 0;
-    bottom: -1px;
-    width: 0%;
-    transition: 0.6s; 
+.hover-4 {
+  --c: #1095c1; /* the color */
+  --b: 0.1em; /* border length*/
+  --d: 20px; /* the cube depth */
+
+  --_s: calc(var(--d) + var(--b));
+
+  color: var(--c);
+  border: solid #0000;
+  border-width: var(--b) var(--b) var(--_s) var(--_s);
+  background: conic-gradient(
+        at left var(--d) bottom var(--d),
+        #0000 90deg,
+        rgb(255 255 255 /0.3) 0 225deg,
+        rgb(255 255 255 /0.6) 0
+      )
+      border-box,
+    conic-gradient(at left var(--_s) bottom var(--_s), #0000 90deg, var(--c) 0) 0 100% /
+      calc(100% - var(--b)) calc(100% - var(--b)) border-box;
+  transform: translate(calc(var(--d) / -1), var(--d));
+  clip-path: polygon(
+    var(--d) 0%,
+    var(--d) 0%,
+    100% 0%,
+    100% calc(100% - var(--d)),
+    100% calc(100% - var(--d)),
+    var(--d) calc(100% - var(--d))
+  );
+  transition: 0.5s;
 }
-.hover-7:hover::after{
-    width: 100%;
+.hover-4:hover {
+  transform: translate(0, 0);
+  clip-path: polygon(
+    0% var(--d),
+    var(--d) 0%,
+    100% 0%,
+    100% calc(100% - var(--d)),
+    calc(100% - var(--d)) 100%,
+    0% 100%
+  );
 }
-.hover-7:hover{
-    transform: scale(1.1);
+.hover-5 {
+  --b: 0.1em; /* the thickness of the line */
+  --c: #1095c1; /* the color */
+
+  color: #0000;
+  padding-block: var(--b);
+  background: linear-gradient(var(--c) 50%, #000 0) 0% calc(100% - var(--_p, 0%)) / 100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.3s var(--_s, 0s) linear, background-size 0.3s calc(0.3s - var(--_s, 0s));
+}
+.hover-5:hover {
+  --_p: 100%;
+  --_s: 0.3s;
+}
+.hover-6 {
+  border: 8px solid;
+  border-image: repeating-linear-gradient(135deg, #f8ca00 0 10px, #e97f02 0 20px, #bd1550 0 30px) 8;
+  -webkit-mask: conic-gradient(from 180deg at top 8px right 8px, #0000 90deg, #000 0)
+      var(--_i, 200%) 0 /200% var(--_i, 8px) border-box no-repeat,
+    conic-gradient(at bottom 8px left 8px, #0000 90deg, #000 0) 0 var(--_i, 200%) / var(--_i, 8px)
+      200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+  transition: 0.3s, -webkit-mask-position 0.3s 0.3s;
+}
+.hover-6:hover {
+  --_i: 100%;
+  color: #cc333f;
+  transition: 0.3s, -webkit-mask-size 0.3s 0.3s;
 }
 
-.hover-8:hover  {
+.hover-7:after {
+  content: "";
+  position: absolute;
+  background-color: #ff7d00;
+  height: 2px;
+  left: 0;
+  bottom: -1px;
+  width: 0%;
+  transition: 0.6s;
+}
+.hover-7:hover::after {
+  width: 100%;
+}
+.hover-7:hover {
+  transform: scale(1.1);
+}
+
+.hover-8:hover {
   transform: rotateY(360deg);
 }
-
 
 .glow-on-hover {
   width: 100%;
   height: 40px;
   border: none;
   outline: none;
-  color: #FF7D00;
-  background: #FF7D00;
+  color: #ff7d00;
+  background: #ff7d00;
   cursor: pointer;
   position: relative;
   z-index: 0;
@@ -180,11 +148,22 @@
 }
 
 .glow-on-hover:before {
-  content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
   position: absolute;
   top: -2px;
-  left:-2px;
+  left: -2px;
   background-size: 400%;
   z-index: -1;
   filter: blur(5px);
@@ -192,12 +171,12 @@
   height: calc(100% + 4px);
   animation: glowing 20s linear infinite;
   opacity: 0;
-  transition: opacity .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
 }
 
 .glow-on-hover:active {
-  color: #FF7D00
+  color: #ff7d00;
 }
 
 .glow-on-hover:active:after {
@@ -210,7 +189,7 @@
 
 .glow-on-hover:after {
   z-index: -1;
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -221,9 +200,15 @@
 }
 
 @keyframes glowing {
-  0% { background-position: 0 0; }
-  50% { background-position: 400% 0; }
-  100% { background-position: 0 0; }
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 /* .wrapper{
@@ -231,7 +216,7 @@
   top: 50%;
   left: 50%;
   border-radius: 20px; /*aaaa*/
-  /* transform: translate(-50%, -50%); */
+/* transform: translate(-50%, -50%); */
 /* }
 
 a{
@@ -272,14 +257,14 @@ a:hover{
 
 a:hover:after{
   width: 100%;
-} */ 
+} */
 
 /* Sagdan gelip soldan giden arka plan*/
 .btn41-43 {
   /* padding: 10px 25px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;*/
-  background: transparent; 
+  background: transparent;
   outline: none !important;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -288,9 +273,9 @@ a:hover:after{
 }
 
 .btn-41 {
-  border: 2px solid #33BBC5;
+  border: 2px solid #33bbc5;
   z-index: 1;
-  color: white; 
+  color: white;
 }
 
 .btn-41:after {
@@ -302,17 +287,14 @@ a:hover:after{
   left: 0;
   direction: rtl;
   z-index: -1;
-  background: #33BBC5;
+  background: #33bbc5;
   transition: all 0.3s ease;
   border-radius: 10px;
-
-
 }
 
 .btn-41:hover {
   color: rgb(255, 255, 255);
   border: 2px solid #fff;
-
 }
 
 .btn-41:hover:after {
@@ -326,9 +308,9 @@ a:hover:after{
 }
 
 .btn-42 {
-  border: 2px solid #33BBC5;
+  border: 2px solid #33bbc5;
   z-index: 1;
-  color: white; 
+  color: white;
 }
 
 .btn-42:after {
@@ -340,17 +322,14 @@ a:hover:after{
   left: 0;
   direction: rtl;
   z-index: -1;
-  background: #FF7D00;
+  background: #ff7d00;
   transition: all 0.3s ease;
   border-radius: 10px;
-
-
 }
 
 .btn-42:hover {
   color: rgb(255, 255, 255);
   border: 2px solid #fff;
-
 }
 
 .btn-42:hover:after {

@@ -22,31 +22,43 @@ const Experience = () => {
 
   const fromLeft = {
     hidden: {
-      y: -75,
+      x: "-100vw",
     },
     visible: {
-      y: 0,
-      transition: { type: "spring", delay: 0.3, duration: 0.7, ease: "easeIn" },
+      x: 0,
+      transition: { type: "spring", delay: 0.3, duration: 0.7 },
     },
   };
   const fromRight = {
     hidden: {
       opacity: 0,
-      y: 75,
+      x: "100vw",
     },
     visible: {
       opacity: 1,
-      y: 0,
-      transition: { type: "spring", delay: 0.3, duration: 0.7, ease: "easeIn" },
+      x: 0,
+      transition: { type: "spring", delay: 0.3, duration: 0.7 },
     },
   };
 
   return (
-    <section className="experience-top-div">
+    <section className="experience-top-div" style={{ overflow: "hidden" }}>
       <div className="experience-top-div">
         <section ref={ref1} className="experience-container d-flex">
           <div className="exp-left-cards">
-            <motion.div class="card mb-3" variants={fromLeft} initial="hidden" animate={controls1}>
+            <motion.div
+              class="card mb-3"
+              variants={{
+                hidden: { opacity: 0, x: "-100vw" },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  transition: { type: "spring", delay: 0.4, duration: 1.6 },
+                },
+              }}
+              initial="hidden"
+              animate={controls1}
+            >
               <div className="card-hover"></div>
               <div class="card-header">
                 <i className="fa-solid fa-building pe-3"></i> Freelance
