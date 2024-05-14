@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import "./Skills.css";
 import "./hovers.css";
 import skills1 from "../images/skills1.png";
@@ -9,7 +9,7 @@ import bootstrap from "../images/icons/bootstrap.png";
 import css from "../images/icons/css.png";
 import git from "../images/icons/git.png";
 import github from "../images/icons/github.png";
-import jira from "../images/icons/jira.png";
+// import jira from "../images/icons/jira.png";
 import figma from "../images/icons/figma.png";
 import js from "../images/icons/js.png";
 import mysql from "../images/icons/mysql.png";

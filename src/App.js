@@ -9,9 +9,15 @@ import Experience from "./components/Experience";
 import Educations from "./components/Educations";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import { useInView, useAnimation } from "framer-motion";
+import { useInView, useAnimation, useScroll, motion, useSpring } from "framer-motion";
 
 function App() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const isInWiew = useInView(ref1, { once: true });
@@ -31,6 +37,7 @@ function App() {
 
   return (
     <div className="App">
+      <motion.div className="my-progress-bar" style={{ scaleX }} />
       <CustomNavbar />
       <About />
       <ThreeCircles linkId={"projects"} />
@@ -56,48 +63,6 @@ function App() {
       <ThreeCircles />
       <Footer />
     </div>
-    // <div className="App">
-    //   <CustomNavbar />
-    //   <About />
-    //   <section className="link-id-tag">
-    //     <div id="projects" ref={ref1} className="link-id-tag">
-    //       {scrollPos1 < 900 ? <ThreeCircles linkId={"projects"} /> : ""}
-    //     </div>
-    //   </section>
-    //   <h2 className="section-header px-4 text-white">My Projects </h2>
-    //   <Projects fromIndex={0} toIndex={9} />
-    //   <Projects fromIndex={10} toIndex={30} />
-    //   <section className="link-id-tag">
-    //     <div id="skills" ref={ref2} className="link-id-tag">
-    //       {scrollPos2 < 900 ? <ThreeCircles linkId={"skills"} /> : ""}
-    //     </div>
-    //   </section>
-    //   <h2 className="section-header px-4 text-white">My Skills</h2>
-    //   <Skills />
-    //   <section className="link-id-tag">
-    //     <div id="experiences" ref={ref3} className="link-id-tag">
-    //       {scrollPos3 < 900 ? <ThreeCircles linkId={"experiences"} /> : ""}
-    //     </div>
-    //   </section>
-    //   <h2 className="section-header px-4 text-white mb-4">Experiences</h2>
-    //   <Experience />
-    //   <section className="link-id-tag">
-    //     <div id="educations" ref={ref4} className="link-id-tag">
-    //       {scrollPos4 < 900 ? <ThreeCircles linkId={"educations"} /> : ""}
-    //     </div>
-    //   </section>
-    //   <h2 className="section-header px-4 text-white  mb-4">Educations</h2>
-    //   <Educations />
-    //   <section className="link-id-tag">
-    //     <div id="contact" ref={ref5} className="link-id-tag">
-    //       {scrollPos5 < 900 ? <ThreeCircles linkId={"contact"} /> : ""}
-    //     </div>
-    //   </section>
-    //   <h2 className="section-header px-4 text-white  mb-4">Contact</h2>
-    //   <Contact />
-    //   <ThreeCircles />
-    //   <Footer />
-    // </div>
   );
 }
 
