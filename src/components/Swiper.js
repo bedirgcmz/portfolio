@@ -3,6 +3,7 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import projectData from "../data/ProjectsData.json";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { getImageURL } from "../utils/functions";
 
 // Import Swiper styles
 import "swiper/css";
@@ -48,7 +49,7 @@ export default ({ fromIndex, toIndex }) => {
         clickable: true,
       }}
       navigation={true}
-      autoplay={true}
+      autoplay={{ delay: 5000 }}
       className="mySwiper"
     >
       {projectData
@@ -57,11 +58,12 @@ export default ({ fromIndex, toIndex }) => {
           <SwiperSlide key={project.id}>
             <motion.div
               className="my-card m-auto "
-              whileHover={{ scale: 1.07 }}
-              transition={{ type: "spring", stiffness: 300, damping: 7 }}
+              whileHover={{ scale: 0.94 }}
+              transition={{ type: "spring", stiffness: 160, damping: 7 }}
             >
               <div className="card-left-content">
-                <img className="card-img" src={project.image} alt="Project demo" />
+
+                <img className="card-img" src={getImageURL(project.image) } alt="Project demo" />
                 <div className="line-and-cirkle-container">
                   <div className="one">
                     <div className="l-line line"></div>
@@ -78,13 +80,14 @@ export default ({ fromIndex, toIndex }) => {
               <div className="card-right-content">
                 <p className="project-info">{project.info}</p>
                 <div className="d-flex justify-content-between">
-                  <a href={project.link} className="see-demo me-2 btn41-43 btn-41" target="_blank">
+                  <a href={project.link} className="see-demo me-2 btn41-43 btn-41" target="_blank" rel="noreferrer">
                     See demo
                   </a>
                   <a
                     href={project.github_link}
                     className="go-github btn41-43 btn-42"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Go Github
                   </a>

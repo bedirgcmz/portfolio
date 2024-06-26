@@ -7,7 +7,7 @@ const ThreeCircles = ({ linkId }) => {
       <div id={linkId} className="three-circles-container">
         <motion.div
           className="firs-circle m-5"
-          initial={{ opacity: 0, x: -80 }}
+          initial={{ opacity: 0, x: -70 }}
           whileInView={{
             opacity: 1,
             x: 0,
@@ -27,7 +27,7 @@ const ThreeCircles = ({ linkId }) => {
         ></motion.div>
         <motion.div
           className="third-circle m-5"
-          initial={{ opacity: 0, x: 80 }}
+          initial={{ opacity: 0, x: 70 }}
           whileInView={{
             opacity: 1,
             x: 0,

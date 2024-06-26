@@ -47,7 +47,7 @@ const Experience = () => {
         <section ref={ref1} className="experience-container d-flex">
           <div className="exp-left-cards">
             <motion.div
-              class="card mb-3"
+              className="card mb-3"
               variants={{
                 hidden: { opacity: 0, x: "-100vw" },
                 visible: {
@@ -60,31 +60,31 @@ const Experience = () => {
               animate={controls1}
             >
               <div className="card-hover"></div>
-              <div class="card-header">
+              <div className="card-header">
                 <i className="fa-solid fa-building pe-3"></i> Freelance
               </div>
-              <div class="card-body">
-                <h5 class="card-title">
+              <div className="card-body">
+                <h5 className="card-title">
                   <i className="fa-solid fa-solid fa-code pe-3 pe-3"></i> Frontend Developer
                 </h5>
-                <p class="card-text">
+                <p className="card-text">
                   Coding, design, design, page management, using react, Using npm package, writing
                   html css bootstrap javascript code..
                 </p>
               </div>
               <div className="exp-date">07.2022 - Currently</div>
             </motion.div>
-            <motion.div class="card mb-3" variants={fromLeft} initial="hidden" animate={controls1}>
+            <motion.div className="card mb-3" variants={fromLeft} initial="hidden" animate={controls1}>
               <div className="card-hover"></div>
-              <div class="card-header">
+              <div className="card-header">
                 <i className="fa-solid fa-building pe-3"></i> Toros Primary School
               </div>
-              <div class="card-body">
-                <h5 class="card-title">
+              <div className="card-body">
+                <h5 className="card-title">
                   <i className="fa-solid fa-solid fa-person-chalkboard pe-3 pe-3"></i>Primary School
                   Teaching
                 </h5>
-                <p class="card-text">
+                <p className="card-text">
                   Classroom management, lecture, student follow-up, homework follow-up, teaching
                   literacy, family visits..
                 </p>
@@ -99,37 +99,37 @@ const Experience = () => {
               <span>2019</span>
               <span>2023</span>
             </div>
-            <i class="exp-arrow first-arrow fa-solid fa-play"></i>
-            <i class="exp-arrow second-arrow fa-solid fa-play"></i>
-            <i class="exp-arrow third-arrow fa-solid fa-play"></i>
-            <i class="exp-arrow fourth-arrow fa-solid fa-play"></i>
+            <i className="exp-arrow first-arrow fa-solid fa-play"></i>
+            <i className="exp-arrow second-arrow fa-solid fa-play"></i>
+            <i className="exp-arrow third-arrow fa-solid fa-play"></i>
+            <i className="exp-arrow fourth-arrow fa-solid fa-play"></i>
           </div>
           <div ref={ref2} className="exp-right-cards">
-            <motion.div class="card mb-3" variants={fromRight} initial="hidden" animate={controls2}>
+            <motion.div className="card mb-3" variants={fromRight} initial="hidden" animate={controls2}>
               <div className="card-hover"></div>
-              <div class="card-header">
+              <div className="card-header">
                 <i className="fa-solid fa-building pe-3"></i>MEM Educational Institutions
               </div>
-              <div class="card-body">
-                <h5 class="card-title">
+              <div className="card-body">
+                <h5 className="card-title">
                   <i className="fa-solid fa-solid fa-person-walking-arrow-right pe-3 pe-3"></i>
                   Student Coaching
                 </h5>
-                <p class="card-text">
+                <p className="card-text">
                   Student coaching, motivation, guidance, preparing a study program, homework
                   follow-up, seminar, coordination, family visits..
                 </p>
               </div>
               <div className="exp-date">08.2018 - 09.2020</div>
             </motion.div>
-            <motion.div class="card mb-3" variants={fromRight} initial="hidden" animate={controls2}>
+            <motion.div className="card mb-3" variants={fromRight} initial="hidden" animate={controls2}>
               <div className="card-hover"></div>
-              <div class="card-header">
+              <div className="card-header">
                 <i className="fa-solid fa-building pe-3"></i>Rainbow Educational Institutions
               </div>
-              <div class="card-body">
-                <h5 class="card-title">Primary School Teaching</h5>
-                <p class="card-text">
+              <div className="card-body">
+                <h5 className="card-title">Primary School Teaching</h5>
+                <p className="card-text">
                   Classroom management, lecture, student follow-up, homework follow-up, teaching
                   literacy, family visits..
                 </p>

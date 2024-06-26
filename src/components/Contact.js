@@ -1,19 +1,25 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import emailjs from "emailjs-com";
+import Swal from 'sweetalert2'
 import "./Contact.css";
 import "./hovers.css";
 
 const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
-
+    
     emailjs
-      .sendForm("service_w21zl4c", "template_4y8tcvh", e.target, "m2Y_XycLwC6X2Pz8M")
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => console.log(err));
+    .sendForm("service_w21zl4c", "template_4y8tcvh", e.target, "m2Y_XycLwC6X2Pz8M")
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => console.log(err));
+
+    document.getElementById("name").value = ""
+    document.getElementById("email").value = ""
+    document.getElementById("message").value = ""
+    Swal.fire("Thank you for your message. I will get in touch with you as soon as possible.");
   };
 
   const ref1 = useRef(null);
@@ -41,6 +47,7 @@ const Contact = () => {
           <div className="input-area mb-3">
             <i className="form-icon fa-solid fa-user"></i>
             <input
+            id="name"
               name="name"
               type="text"
               className="form-control name"
@@ -51,6 +58,7 @@ const Contact = () => {
           <div className="input-area mb-3">
             <i className="form-icon fa-regular fa-envelope"></i>
             <input
+            id="email"
               name="email"
               type="email"
               className="form-control email"
@@ -60,6 +68,7 @@ const Contact = () => {
           </div>
           <div className="mb-3 input-area">
             <textarea
+            id="message"
               name="message"
               className="form-control message"
               rows="3"
@@ -106,7 +115,7 @@ const Contact = () => {
           <div ref={ref2} className="mb-2 touch-me-icons">
             <>
               <motion.div
-                class="touch-me-icon-container"
+                className="touch-me-icon-container"
                 variants={{
                   hidden: { opacity: 0, x: "-100vw" },
                   visible: {
@@ -120,14 +129,14 @@ const Contact = () => {
               >
                 <a
                   href="https://www.linkedin.com/in/bedirgocmez/"
-                  class="touch-me-icon icon-fill"
+                  className="touch-me-icon icon-fill"
                   target="_blank"
                 >
                   <i className="fa-brands fa-linkedin"></i>
                 </a>
               </motion.div>
               <motion.div
-                class="touch-me-icon-container"
+                className="touch-me-icon-container"
                 variants={{
                   hidden: { opacity: 0, x: "100vw" },
                   visible: {
@@ -141,7 +150,7 @@ const Contact = () => {
               >
                 <a
                   href="https://github.com/bedirgcmz"
-                  class="touch-me-icon icon-fill"
+                  className="touch-me-icon icon-fill"
                   target="_blank"
                 >
                   <i className="fa-brands fa-github"></i>

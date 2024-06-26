@@ -65,9 +65,9 @@ const Educations = () => {
   return (
     <section style={{ height: "480px", overflow: "hidden" }}>
       <div ref={ref1}>
-        <div class="accordion educations-container" id="accordionExample">
+        <div className="accordion educations-container" id="accordionExample">
           {myEducations.map((edu, index) => (
-            <Accordion {...edu} controls1={controls1} />
+            <Accordion key={index} {...edu} controls1={controls1} />
           ))}
         </div>
       </div>
@@ -78,18 +78,18 @@ const Educations = () => {
 const Accordion = ({ id, icon, edu_name, date, company, info, delayValue, controls1 }) => {
   return (
     <>
-      <div key={id} class="accordion-item">
+      <div key={id} className="accordion-item">
         <div className="edu-name-container">
-          <h2 class="accordion-header">
+          <h2 className="accordion-header">
             <button
-              class="accordion-button collapsed"
+              className="accordion-button collapsed"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target={`#colleps${id}`}
               aria-expanded="false"
               aria-controls={`colleps${id}`}
             >
-              <i class={icon}></i>
+              <i className={icon}></i>
               <motion.p
                 variants={{
                   hidden: { opacity: 0, y: "-100vh" },
@@ -111,12 +111,12 @@ const Accordion = ({ id, icon, edu_name, date, company, info, delayValue, contro
 
         <div
           id={`colleps${id}`}
-          class="accordion-collapse collapse"
+          className="accordion-collapse collapse"
           data-bs-parent="#accordionExample"
         >
-          <div class="accordion-body">
+          <div className="accordion-body">
             <h6 className="edu-company-name">
-              <i class="fa-solid fa-city pe-3"></i>
+              <i className="fa-solid fa-city pe-3"></i>
               {company}
             </h6>
             {info}

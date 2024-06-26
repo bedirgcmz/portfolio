@@ -64,12 +64,12 @@ const About = () => {
           <span className="d-inline-block circle-1"></span>
           <span className="d-inline-block github-icon mt-3 mb-3">
             <a href="https://github.com/bedirgcmz" target="_blank">
-              <i class="fa-brands fa-github"></i>
+              <i className="fa-brands fa-github"></i>
             </a>
           </span>
           <span className="d-inline-block linkedin-icon mb-3">
             <a href="https://www.linkedin.com/in/bedirgocmez/" target="_blank">
-              <i class="fa-brands fa-linkedin-in"></i>
+              <i className="fa-brands fa-linkedin-in"></i>
             </a>
           </span>
           <span className="d-inline-block circle-2"></span>
@@ -131,7 +131,7 @@ const About = () => {
         download="Bedir-Gocmez-Cv.pdf"
       >
         <span>
-          <i class="fa-solid fa-download pe-2"></i>Download CV
+          <i className="fa-solid fa-download pe-2"></i>Download CV
         </span>
       </a>
     </div>

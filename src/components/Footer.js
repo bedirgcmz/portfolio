@@ -14,24 +14,12 @@ const Footer = () => {
       <a
         onClick={scrollToTop}
         className="back-top"
-        // animate={{
-        //   scale: [1, 1.3, 1.3, 1, 1],
-        //   rotate: [-90, -90, 180, 180, -90],
-        //   borderRadius: ["0%", "0%", "30%", "30%", "0%"],
-        // }}
-        // transition={{
-        //   duration: 2,
-        //   ease: "easeInOut",
-        //   times: [0, 0.2, 0.5, 0.8, 1],
-        //   repeat: Infinity,
-        //   repeatDelay: 1,
-        // }}
       >
         <span>Back Top </span>
         <span>
-          <i class="fa-solid fa-chevron-right"></i>
-          <i class="fa-solid fa-chevron-right" style={{ opacity: 0.7 }}></i>
-          <i class="fa-solid fa-chevron-right" style={{ opacity: 0.4 }}></i>
+          <i className="fa-solid fa-chevron-right"></i>
+          <i className="fa-solid fa-chevron-right" style={{ opacity: 0.7 }}></i>
+          <i className="fa-solid fa-chevron-right" style={{ opacity: 0.4 }}></i>
         </span>
       </a>
       <div className="footer-left-side">

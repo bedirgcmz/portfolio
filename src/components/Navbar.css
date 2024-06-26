@@ -3,6 +3,10 @@
     color: white;
     z-index: 9999;
 }
+.navbar-toggler {
+    background-color: #ff7d00;
+}
+
 .title {
     font-size: 14px;
     color: #FF7D00;

@@ -213,6 +213,7 @@ const PersSkills = () => {
           whileHover={{ scale: 1.2 }}
           transition={{ type: "spring", stiffness: 300, damping: 7 }}
         >
+          {/* <img src={skill.img} className="skill-img"></img> */}
           <div className="skill-right-content">
             <div className="skill-name-container">
               <span className="skill-point me-2"></span>
