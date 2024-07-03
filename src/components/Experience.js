@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import "./Experience.css";
 import { motion, useInView, useAnimation } from "framer-motion";
 
@@ -18,7 +18,7 @@ const Experience = () => {
     if (isInWiew2) {
       controls2.start("visible");
     }
-  }, [isInWiew, isInWiew2]);
+  }, [isInWiew, isInWiew2, controls1, controls2]);
 
   const fromLeft = {
     hidden: {

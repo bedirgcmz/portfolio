@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import emailjs from "emailjs-com";
 import Swal from 'sweetalert2'
@@ -37,7 +37,7 @@ const Contact = () => {
     if (isInWiew2) {
       controls2.start("visible");
     }
-  }, [isInWiew, isInWiew2]);
+  }, [isInWiew, isInWiew2, controls1, controls2]);
 
   return (
     <section className="contact-container container" style={{ overflow: "hidden" }}>
@@ -131,6 +131,7 @@ const Contact = () => {
                   href="https://www.linkedin.com/in/bedirgocmez/"
                   className="touch-me-icon icon-fill"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <i className="fa-brands fa-linkedin"></i>
                 </a>
@@ -152,6 +153,7 @@ const Contact = () => {
                   href="https://github.com/bedirgcmz"
                   className="touch-me-icon icon-fill"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <i className="fa-brands fa-github"></i>
                 </a>

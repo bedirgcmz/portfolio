@@ -49,7 +49,9 @@ export default ({ fromIndex, toIndex }) => {
         clickable: true,
       }}
       navigation={true}
-      autoplay={{ delay: 5000 }}
+      autoplay={{ delay: 3000, pauseOnMouseEnter : true }}
+      
+      // disableOnInteraction={false}
       className="mySwiper"
     >
       {projectData
@@ -58,7 +60,7 @@ export default ({ fromIndex, toIndex }) => {
           <SwiperSlide key={project.id}>
             <motion.div
               className="my-card m-auto "
-              whileHover={{ scale: 0.94 }}
+              whileHover={{ scale: 0.96 }}
               transition={{ type: "spring", stiffness: 160, damping: 7 }}
             >
               <div className="card-left-content">

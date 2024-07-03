@@ -16,7 +16,7 @@ const CustomNavbar = () => {
           width="40"
           height="40"
           className="d-inline-block align-top"
-          alt="Profile Image"
+          alt="Profile"
         />
         <div className="name-and-title ms-3 me-5 text-center">
           <p className="name text-white">Bedir Gocmez</p>
@@ -51,6 +51,7 @@ const CustomNavbar = () => {
         target="_blank"
         className="download-cv float-right btn-one"
         download="Bedir-Gocmez-Cv.pdf"
+        rel="noreferrer"
       >
         <span>
           <i className="fa-solid fa-download pe-2"></i>Download CV

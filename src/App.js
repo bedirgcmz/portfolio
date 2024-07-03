@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import "./App.css";
 import CustomNavbar from "./components/CustomNavbar";
 import Projects from "./components/Projects";
@@ -34,7 +34,7 @@ function App() {
     if (isInWiew2) {
       controls2.start("visible");
     }
-  }, [isInWiew, isInWiew2]);
+  }, [isInWiew, isInWiew2, controls1, controls2]);
 
   return (
     <div className="App">

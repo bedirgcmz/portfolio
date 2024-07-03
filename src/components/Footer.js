@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import { motion, useInView, useAnimation } from "framer-motion";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -11,7 +10,7 @@ const Footer = () => {
   };
   return (
     <footer className="footer">
-      <a
+      <button
         onClick={scrollToTop}
         className="back-top"
       >
@@ -21,7 +20,7 @@ const Footer = () => {
           <i className="fa-solid fa-chevron-right" style={{ opacity: 0.7 }}></i>
           <i className="fa-solid fa-chevron-right" style={{ opacity: 0.4 }}></i>
         </span>
-      </a>
+      </button>
       <div className="footer-left-side">
         <p className="my-2">&#169; 2023 Copyright</p>
         <p className="my-2">Bedir Gocmez</p>

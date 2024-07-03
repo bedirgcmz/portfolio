@@ -35,22 +35,22 @@ const About = () => {
       transition: { type: "spring", delay: 0.3, duration: 1.6 },
     },
   };
-  const fromBottom = {
-    hidden: {
-      opacity: 0,
-      y: -70,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { type: "spring", delay: 0.3, duration: 1.6 },
-    },
-  };
+  // const fromBottom = {
+  //   hidden: {
+  //     opacity: 0,
+  //     y: -70,
+  //   },
+  //   visible: {
+  //     opacity: 1,
+  //     y: 0,
+  //     transition: { type: "spring", delay: 0.3, duration: 1.6 },
+  //   },
+  // };
   return (
     <div
       id="about"
       className="about-margin-top"
-      style={{ height: window.innerWidth < 768 ? "860px" : "550px" }}
+      style={{ height: window.innerWidth < 769 ? "860px" : "550px" }}
     >
       <div className="about-container row">
         <div className="touch-me-container col-md-1">
@@ -63,12 +63,12 @@ const About = () => {
           ></motion.span>
           <span className="d-inline-block circle-1"></span>
           <span className="d-inline-block github-icon mt-3 mb-3">
-            <a href="https://github.com/bedirgcmz" target="_blank">
+            <a href="https://github.com/bedirgcmz" target="_blank" rel="noreferrer">
               <i className="fa-brands fa-github"></i>
             </a>
           </span>
           <span className="d-inline-block linkedin-icon mb-3">
-            <a href="https://www.linkedin.com/in/bedirgocmez/" target="_blank">
+            <a href="https://www.linkedin.com/in/bedirgocmez/" target="_blank" rel="noreferrer">
               <i className="fa-brands fa-linkedin-in"></i>
             </a>
           </span>
@@ -129,6 +129,7 @@ const About = () => {
         target="_blank"
         className="download-cv-bottom float-right"
         download="Bedir-Gocmez-Cv.pdf"
+        rel="noreferrer"
       >
         <span>
           <i className="fa-solid fa-download pe-2"></i>Download CV

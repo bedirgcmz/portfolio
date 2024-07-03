@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import "./Educations.css";
 
@@ -60,7 +60,7 @@ const Educations = () => {
     if (isInWiew) {
       controls1.start("visible");
     }
-  }, [isInWiew]);
+  }, [isInWiew, controls1]);
 
   return (
     <section style={{ height: "480px", overflow: "hidden" }}>

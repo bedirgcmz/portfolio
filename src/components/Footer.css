@@ -44,6 +44,7 @@
 }
 .back-top {
   color: #fff;
+  background-color: #ff000000;
   text-decoration: none;
   position: absolute;
   bottom: 200px;

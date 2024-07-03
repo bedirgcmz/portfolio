@@ -4,17 +4,20 @@ import "./hovers.css";
 import skills1 from "../images/skills1.png";
 import skills2 from "../images/skills2.png";
 import html from "../images/icons/html.png";
-import agile from "../images/icons/agile.png";
+// import agile from "../images/icons/agile.png";
 import bootstrap from "../images/icons/bootstrap.png";
-import css from "../images/icons/css.png";
+// import css from "../images/icons/css.png";
 import git from "../images/icons/git.png";
-import github from "../images/icons/github.png";
+// import github from "../images/icons/github.png";
 // import jira from "../images/icons/jira.png";
 import figma from "../images/icons/figma.png";
 import js from "../images/icons/js.png";
 import mysql from "../images/icons/mysql.png";
 import nodejs from "../images/icons/nodejs.jpg";
 import react from "../images/icons/react.png";
+import typescript from "../images/icons/typescript.png";
+import nextjs from "../images/icons/nextjs.png";
+import tailwind from "../images/icons/tailwind.png";
 import expressjs from "../images/icons/expressjs.png";
 import { motion, useInView, useAnimation } from "framer-motion";
 
@@ -34,7 +37,7 @@ const Skills = () => {
     if (isInWiew2) {
       controls2.start("visible");
     }
-  }, [isInWiew, isInWiew2]);
+  }, [isInWiew, isInWiew2, controls1, controls2]);
   return (
     <>
       <section className="prof-top-div">
@@ -43,6 +46,7 @@ const Skills = () => {
             <ProfSkills />
             <div ref={ref1} className="skill-img-container">
               <motion.img
+              alt="skils image"
                 className="prof-skill-wheel skills-wheel "
                 src={skills1}
                 variants={{
@@ -67,6 +71,7 @@ const Skills = () => {
             <PersSkills />
             <div ref={ref2} className="skill-img-container">
               <motion.img
+              alt="skils image"
                 className="pers-skill-wheel skills-wheel "
                 src={skills2}
                 variants={{
@@ -91,13 +96,13 @@ const Skills = () => {
 const ProfSkills = () => {
   const myProfSkills = [
     {
-      skill_name: "Html",
+      skill_name: "Html - Css",
       img: html,
       class: "html",
     },
     {
-      skill_name: "Css",
-      img: css,
+      skill_name: "Next.js",
+      img: nextjs,
       class: "css",
     },
     {
@@ -118,7 +123,7 @@ const ProfSkills = () => {
     {
       skill_name: "NodeJs",
       img: nodejs,
-      class: "nodejs",
+      class: "agile",
     },
     {
       skill_name: "MySql",
@@ -131,9 +136,9 @@ const ProfSkills = () => {
       class: "expressjs",
     },
     {
-      skill_name: "Agile",
-      img: agile,
-      class: "agile",
+      skill_name: "Tailwind",
+      img: tailwind,
+      class: "nodejs",
     },
     {
       skill_name: "Figma",
@@ -141,13 +146,13 @@ const ProfSkills = () => {
       class: "figma",
     },
     {
-      skill_name: "Git",
+      skill_name: "Git - Github",
       img: git,
       class: "git",
     },
     {
-      skill_name: "Github",
-      img: github,
+      skill_name: "Typescript",
+      img: typescript,
       class: "github",
     },
   ];
@@ -160,7 +165,7 @@ const ProfSkills = () => {
           whileHover={{ scale: 1.2 }}
           transition={{ type: "spring", stiffness: 300, damping: 7 }}
         >
-          <img src={skill.img} className="skill-img"></img>
+          <img src={skill.img} className="skill-img" alt="skil img" ></img>
           <div className="skill-right-content">
             <div className="skill-name-container">
               <span className="skill-point me-2"></span>
