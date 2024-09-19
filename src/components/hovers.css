@@ -211,54 +211,6 @@
   }
 }
 
-/* .wrapper{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  border-radius: 20px; /*aaaa*/
-/* transform: translate(-50%, -50%); */
-/* }
-
-a{
-  display: block;
-  width: 200px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 18px;
-  font-family: sans-serif;
-  text-decoration: none;
-  color: #333;
-  border: 2px solid #333;
-  letter-spacing: 2px;
-  text-align: center;
-  position: relative;
-  transition: all .35s;
-}
-
-a span{
-  position: relative;
-  z-index: 2;
-}
-
-a:after{
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #ff003b;
-  transition: all .35s;
-}
-
-a:hover{
-  color: #fff;
-}
-
-a:hover:after{
-  width: 100%;
-} */
-
 /* Sagdan gelip soldan giden arka plan*/
 .btn41-43 {
   /* padding: 10px 25px;
@@ -273,7 +225,7 @@ a:hover:after{
 }
 
 .btn-41 {
-  border: 2px solid #33bbc5;
+  /* border: 2px solid #33bbc5; */
   z-index: 1;
   color: white;
 }
@@ -294,7 +246,7 @@ a:hover:after{
 
 .btn-41:hover {
   color: rgb(255, 255, 255);
-  border: 2px solid #fff;
+  /* border: 2px solid #fff; */
 }
 
 .btn-41:hover:after {
@@ -329,7 +281,7 @@ a:hover:after{
 
 .btn-42:hover {
   color: rgb(255, 255, 255);
-  border: 2px solid #fff;
+  /* border: 2px solid #fff; */
 }
 
 .btn-42:hover:after {

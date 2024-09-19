@@ -10,7 +10,7 @@ import Educations from "./components/Educations";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { useInView, useAnimation, useScroll, motion, useSpring } from "framer-motion";
-
+import FreelanceProject from "./components/FreelanceProject";
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -42,7 +42,16 @@ function App() {
       <CustomNavbar />
       <About />
       <ThreeCircles linkId={"projects"} />
-      <h2 className="section-header px-4 text-white">My Projects </h2>
+
+      <h2 className="section-header px-4 text-white">Some of My Freelance Projects</h2>
+      <p className="px-4 text-white">
+        Although I’m still a developer learning new things, I also continue to work as a Freelance
+        Frontend Developer. Whenever I find time, I take on new projects. Below are some of the
+        projects I have completed from start to finish as a freelancer.
+      </p>
+      <FreelanceProject />
+      <ThreeCircles linkId={"projects"} />
+      <h2 className="section-header px-4 text-white">My Other Projects </h2>
       <div ref={ref1} style={{ height: "500px" }}>
         <Projects fromIndex={0} toIndex={9} controls={controls1} />
       </div>
