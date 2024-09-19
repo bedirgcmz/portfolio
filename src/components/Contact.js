@@ -1,24 +1,25 @@
 import { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import emailjs from "emailjs-com";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 import "./Contact.css";
 import "./hovers.css";
 
 const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
-    
-    emailjs
-    .sendForm("service_w21zl4c", "template_4y8tcvh", e.target, "m2Y_XycLwC6X2Pz8M")
-    .then((res) => {
-      console.log(res);
-    })
-    .catch((err) => console.log(err));
 
-    document.getElementById("name").value = ""
-    document.getElementById("email").value = ""
-    document.getElementById("message").value = ""
+    emailjs
+      //          service id        template id         obje         public id
+      .sendForm("service_w21zl4c", "template_4y8tcvh", e.target, "m2Y_XycLwC6X2Pz8M")
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
     Swal.fire("Thank you for your message. I will get in touch with you as soon as possible.");
   };
 
@@ -47,7 +48,7 @@ const Contact = () => {
           <div className="input-area mb-3">
             <i className="form-icon fa-solid fa-user"></i>
             <input
-            id="name"
+              id="name"
               name="name"
               type="text"
               className="form-control name"
@@ -58,7 +59,7 @@ const Contact = () => {
           <div className="input-area mb-3">
             <i className="form-icon fa-regular fa-envelope"></i>
             <input
-            id="email"
+              id="email"
               name="email"
               type="email"
               className="form-control email"
@@ -68,7 +69,7 @@ const Contact = () => {
           </div>
           <div className="mb-3 input-area">
             <textarea
-            id="message"
+              id="message"
               name="message"
               className="form-control message"
               rows="3"
