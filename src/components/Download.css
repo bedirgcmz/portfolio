@@ -1,79 +1,18 @@
 .download-cv {
-    background-color: #FF7D00;
-    color: #FFF;
-    padding: 3px 18px;
-    border-radius: 5px;
-    position: relative;
-    text-decoration: underline;
-    transition: all 0.3s;
-    position: relative;
- }
-  .download-cv span {
-    transition: all 0.6s;
-  }
-  .download-cv::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0;
-    transition: all 0.6s;
-    border-top-width: 2px;
-    border-bottom-width: 2px;
-    border-top-style: solid;
-    border-bottom-style: solid;
-    border-top-color: #FF7D00;
-    border-bottom-color: #FF7D00;
-    transform: scale(0.1, 1);
-  }
-  .download-cv:hover span {
-    letter-spacing: 1px;
-  }
-  .download-cv:hover::before {
-    opacity: 1; 
-    transform: scale(1, 1); 
-  }
-  .download-cv::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    transition: all 0.6s;
-  }
-  .download-cv:hover::after {
-    opacity: 0; 
-    transform: scale(0.1, 1);
-  }
-  .download-cv:hover {
-    background-color: #004046;
-    color: #FF7D00;
-    text-decoration: none;
-  }
-
-  .download-cv-bottom {
-    background-color: #FF7D00;
-    color: #FFF;
-    padding: 3px 18px;
-    border-radius: 5px;
-    text-decoration: underline;
-    display: none;
-    width: 166px;
-    margin: 100px auto 40px auto;
-    transition: all 0.3s;
-    position: relative;
- }
-
- .download-cv-bottom span {
+  background-color: #ff7d00;
+  color: #fff;
+  padding: 3px 18px;
+  border-radius: 5px;
+  position: relative;
+  text-decoration: underline;
+  transition: all 0.3s;
+  position: relative;
+}
+.download-cv span {
   transition: all 0.6s;
 }
-.download-cv-bottom::before {
-  content: '';
+.download-cv::before {
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -86,19 +25,80 @@
   border-bottom-width: 2px;
   border-top-style: solid;
   border-bottom-style: solid;
-  border-top-color: #FF7D00;
-  border-bottom-color: #FF7D00;
+  border-top-color: #ff7d00;
+  border-bottom-color: #ff7d00;
+  transform: scale(0.1, 1);
+}
+.download-cv:hover span {
+  letter-spacing: 1px;
+}
+.download-cv:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.download-cv::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.6s;
+}
+.download-cv:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+.download-cv:hover {
+  background-color: #004046;
+  color: #ff7d00;
+  text-decoration: none;
+}
+
+.download-cv-bottom {
+  background-color: #ff7d00;
+  color: #fff;
+  padding: 3px 18px;
+  border-radius: 5px;
+  text-decoration: underline;
+  display: none;
+  width: 166px;
+  margin: 100px auto 40px auto;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.download-cv-bottom span {
+  transition: all 0.6s;
+}
+.download-cv-bottom::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.6s;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: #ff7d00;
+  border-bottom-color: #ff7d00;
   transform: scale(0.1, 1);
 }
 .download-cv-bottom:hover span {
   letter-spacing: 1px;
 }
 .download-cv-bottom:hover::before {
-  opacity: 1; 
-  transform: scale(1, 1); 
+  opacity: 1;
+  transform: scale(1, 1);
 }
 .download-cv-bottom::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -108,32 +108,31 @@
   transition: all 0.6s;
 }
 .download-cv-bottom:hover::after {
-  opacity: 0; 
+  opacity: 0;
   transform: scale(0.1, 1);
 }
 .download-cv-bottom:hover {
   background-color: #004046;
-  color: #FF7D00;
+  color: #ff7d00;
   text-decoration: none;
   width: 172px;
 }
-  @media only screen and (max-width: 992px) {
-    .navbar {
-        position: fixed;
-
-    }
-    .download-cv {
-        position: absolute;
-        right: 106px;
-        top: 24px;
-      }
+@media only screen and (max-width: 992px) {
+  .navbar {
+    position: fixed;
   }
-
-  @media only screen and (max-width: 600px) {
-    .download-cv {
-      display: none;
-    }
-    .download-cv-bottom {
-      display: block;
-    }
+  .download-cv {
+    position: absolute;
+    right: 106px;
+    top: 30px;
   }
+}
+
+@media only screen and (max-width: 600px) {
+  .download-cv {
+    display: none;
+  }
+  .download-cv-bottom {
+    display: block;
+  }
+}

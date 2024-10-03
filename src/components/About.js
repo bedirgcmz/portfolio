@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import "./About.css";
 import "./Download.css";
 import aboutImg from "../images/about_img.png";
@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import BedirGCv from "../documents/Bedir_Gocmez_Cv.pdf";
 
 const About = () => {
+  const [height, setHeight] = useState(window.innerWidth < 769 ? "860px" : "550px");
   const fromLeft = {
     hidden: {
       x: "-100vw",
@@ -46,12 +47,24 @@ const About = () => {
   //     transition: { type: "spring", delay: 0.3, duration: 1.6 },
   //   },
   // };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setHeight(window.innerWidth < 769 ? "880px" : "550px");
+    };
+
+    // Ekran boyutu değiştiğinde dinleyici ekle
+    window.addEventListener("resize", handleResize);
+    // Bileşen yüklendiğinde boyutu kontrol et
+    handleResize();
+    // Bellek sızıntısını önlemek için dinleyiciyi kaldır
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div
-      id="about"
-      className="about-margin-top"
-      style={{ height: window.innerWidth < 769 ? "860px" : "550px" }}
-    >
+    <div id="about" className="about-margin-top" style={{ height }}>
       <div className="about-container row">
         <div className="touch-me-container col-md-1">
           <span className="d-inline-block touch">Touch</span>

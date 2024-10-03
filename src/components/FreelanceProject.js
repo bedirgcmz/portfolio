@@ -1,15 +1,31 @@
 import "./FreelanceProject.css";
 import sky from "../images/sky.jpg";
 import rosee from "../images/rosee.jpg";
+import { useState, useEffect } from "react";
 
 const FreelanceProject = () => {
+  const [screenWidth, setScreenWidth] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth < 769 ? true : false);
+    };
+    // Ekran boyutu değiştiğinde dinleyici ekle
+    window.addEventListener("resize", handleResize);
+    // Bileşen yüklendiğinde boyutu kontrol et
+    handleResize();
+    // Bellek sızıntısını önlemek için dinleyiciyi kaldır
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
-    <div class="free-container">
-      <div class="free-card">
-        <div class="free-img-container">
+    <div className="free-container">
+      <div className="free-card">
+        <p className="hover-me-text">{screenWidth ? "Click me!" : "Hover me!"}</p>
+        <div className="free-img-container">
           <img src={sky} alt="" />
         </div>
-        <div class="free-card-details">
+        <div className="free-card-details">
           <h2>SkyTech</h2>
           <p>
             I built a fully responsive website for SkyTech Edu Academy, which offers coding and
@@ -38,11 +54,12 @@ const FreelanceProject = () => {
           </div>
         </div>
       </div>
-      <div class="free-card">
-        <div class="free-img-container">
+      <div className="free-card">
+        <p className="hover-me-text">{screenWidth ? "Click me!" : "Hover me!"}</p>
+        <div className="free-img-container">
           <img src={rosee} alt="" />
         </div>
-        <div class="free-card-details">
+        <div className="free-card-details">
           <h2>Rose Taxi</h2>
 
           <p>

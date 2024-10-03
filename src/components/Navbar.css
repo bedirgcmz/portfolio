@@ -1,60 +1,61 @@
 .navbar {
-    background-color: #004046;
-    color: white;
-    z-index: 9999;
+  background-color: #004046;
+  color: white;
+  z-index: 9999;
+}
+p.name {
+  color: #faefe0;
 }
 .navbar-toggler {
-    background-color: #ff7d00;
+  background-color: #ff7d00;
 }
 
 .title {
-    font-size: 14px;
-    color: #FF7D00;
-  }
+  font-size: 14px;
+  color: #ff7d00;
+}
 .brand-container {
-    display: flex;
-    align-items: center;
-} 
+  display: flex;
+  align-items: center;
+}
 .brand-container p {
-    margin: 0;
+  margin: 0;
 }
 .brand-container img {
-    border-radius: 50%;
-}
-#basic-navbar-nav a{
-    position: relative;
-    color: white;
-    display: inline-block;
-    margin-right: 1rem;
-    transition: all .2s ease-in-out; 
+  border-radius: 50%;
 }
 #basic-navbar-nav a {
-    --s: 0.1em;   /* the thickness of the line */
-    --c: #FF7D00; /* the color */
-    
-    padding-bottom: var(--s);
-    background: 
-      linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
-      linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
-    -webkit-background-clip: text,padding-box;
-            background-clip: text,padding-box;
-    transition: 0.5s;
-  }
+  position: relative;
+  color: #faefe0;
+  display: inline-block;
+  margin-right: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+#basic-navbar-nav a {
+  --s: 0.1em; /* the thickness of the line */
+  --c: #ff7d00; /* the color */
+
+  padding-bottom: var(--s);
+  background: linear-gradient(90deg, var(--c) 50%, #000 0) calc(100% - var(--_p, 0%)) / 200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.5s;
+}
+#basic-navbar-nav a:hover {
+  --_p: 100%;
+  color: #ff7d00;
+  transform: scale(1.1);
+}
+.active {
+  color: #ff7d00 !important;
+}
+
+@media only screen and (max-width: 992px) {
   #basic-navbar-nav a:hover {
-    --_p: 100%;
-    color: #FF7D00;
     transform: scale(1.1);
   }
- .active {
-color: #FF7D00 !important;
- }
-
- @media only screen and (max-width: 992px) {
-     #basic-navbar-nav a:hover{
-        transform: scale(1.1);
-    }
-    .navbar-collapse .navbar-nav {
-        padding: 10px 57px 0 57px;
-    }
-
- }
+  .navbar-collapse .navbar-nav {
+    padding: 10px 57px 0 57px;
+  }
+}

@@ -16,6 +16,14 @@
     "github_link": "https://github.com/bedirgcmz/hangman"
   },
   {
+    "id": 22,
+    "project_name": "Meals",
+    "image": "meals.jpg",
+    "info": "You can log in to this application that I developed with The Meal DB, which is a great API, find a random meal, create a favorite list and search for a meal name if you want. (Fake user: 'Bedir', '123abc')",
+    "link": "https://bedirgcmz-meals.netlify.app/",
+    "github_link": "https://github.com/bedirgcmz/login"
+  },
+  {
     "id": 3,
     "project_name": "Rose Taxi",
     "image": "roseTaxi.jpg",

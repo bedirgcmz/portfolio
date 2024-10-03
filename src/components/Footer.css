@@ -1,6 +1,6 @@
 .footer {
   background-color: #33bbc5;
-  color: white;
+  color: #faefe0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +19,7 @@
 }
 .vertical-line {
   height: 100px;
-  border-left: 3px solid white;
+  border-left: 3px solid #faefe0;
 }
 
 .footer-right-side {
@@ -43,7 +43,7 @@
   cursor: pointer;
 }
 .back-top {
-  color: #fff;
+  color: #faefe0;
   background-color: #ff000000;
   text-decoration: none;
   position: absolute;

@@ -10,7 +10,7 @@
   background-color: #004046;
   /* padding: 8px 12px; */
   border-radius: 10px;
-  color: white;
+  color: #faefe0;
   box-shadow: #000 0px 3px 8px;
   /* transition: all ease 0.4s; */
   max-width: 330px;
@@ -50,15 +50,15 @@
 }
 
 .line {
-  height: 4px;
+  height: 2px;
   width: 90%;
   background-color: #ff7d00;
   border-radius: 5px;
 }
 
 .circle {
-  height: 12px;
-  width: 14px;
+  height: 9px;
+  width: 9px;
   background-color: #ff7d00;
   border-radius: 50%;
 }

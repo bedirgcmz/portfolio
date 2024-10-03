@@ -21,3 +21,22 @@
   transform-origin: 0%;
   z-index: 99999;
 }
+
+.section-header {
+  padding: 0 5rem;
+  color: #33bbc5;
+}
+
+.title-icon-image {
+  top: 6px;
+  left: 0;
+}
+.frelance-text {
+  padding: 0 5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .frelance-text {
+    padding: 0 3rem;
+  }
+}

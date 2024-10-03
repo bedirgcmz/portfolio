@@ -21,8 +21,8 @@
 }
 .me,
 .touch {
-  writing-mode: vertical-lr; /* veya vertical-lr */
-  text-orientation: mixed; /* Tarayıcı uyumluluğu için, bazı tarayıcılarda gerekli olabilir */
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
   font-size: 0.8rem;
   color: #ff7d00;
   font-weight: 700;
@@ -119,6 +119,7 @@
 .about-img {
   width: 100%;
   margin-top: 10px;
+  filter: drop-shadow(-2px 5px 6px #00000082);
 }
 @media only screen and (min-width: 1124px) {
   .my-fullname {
@@ -169,7 +170,7 @@
   }
   .me,
   .touch {
-    writing-mode: horizontal-tb; /* veya vertical-lr */
+    writing-mode: horizontal-tb;
     text-orientation: mixed;
     font-size: 0.8rem;
     color: #ff7d00;

@@ -33,8 +33,8 @@ const myEducations = [
   {
     id: 4,
     company: "Canakkale Onsekiz Mart Unv.",
-    edu_name: "Primary School Graduate",
-    info: "I received 2 years of postgraduate education. I completed my thesis research on 'The effect of the debate technique in the primary school 4th-grade social sciences course on the coursesuccess and critical thinkingi'",
+    edu_name: "Teacher (Master)",
+    info: "I completed 2 years of postgraduate education and conducted thesis research on the impact of debate techniques on course success and critical thinking in 4th-grade social science classes.",
     date: "09.2014 - 07.2016",
     icon: "fa-solid fa-person-chalkboard pe-3",
     delayValue: 0.35,
@@ -42,7 +42,7 @@ const myEducations = [
   {
     id: 5,
     company: "Canakkale Onsekiz Mart Unv.",
-    edu_name: "Primary School Teacher",
+    edu_name: "Teacher (Bachelor)",
     info: "I have successfully completed my 4-year undergraduate education.",
     date: "09.2007 - 06.2011",
     icon: "fa-solid fa-person-chalkboard pe-3",
@@ -63,7 +63,7 @@ const Educations = () => {
   }, [isInWiew, controls1]);
 
   return (
-    <section style={{ height: "480px", overflow: "hidden" }}>
+    <section style={{ height: "550px", overflow: "hidden" }} className="mt-5">
       <div ref={ref1}>
         <div className="accordion educations-container" id="accordionExample">
           {myEducations.map((edu, index) => (

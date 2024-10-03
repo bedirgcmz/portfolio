@@ -41,7 +41,7 @@ const Contact = () => {
   }, [isInWiew, isInWiew2, controls1, controls2]);
 
   return (
-    <section className="contact-container container" style={{ overflow: "hidden" }}>
+    <section className="contact-container container mt-5" style={{ overflow: "hidden" }}>
       <div ref={ref1} className="form-div">
         <form onSubmit={sendEmail}>
           <h4 className="text-center contact-me-header">Contact Me</h4>

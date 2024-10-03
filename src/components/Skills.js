@@ -46,7 +46,7 @@ const Skills = () => {
             <ProfSkills />
             <div ref={ref1} className="skill-img-container">
               <motion.img
-              alt="skils image"
+                alt="skils image"
                 className="prof-skill-wheel skills-wheel "
                 src={skills1}
                 variants={{
@@ -71,7 +71,7 @@ const Skills = () => {
             <PersSkills />
             <div ref={ref2} className="skill-img-container">
               <motion.img
-              alt="skils image"
+                alt="skils image"
                 className="pers-skill-wheel skills-wheel "
                 src={skills2}
                 variants={{
@@ -165,11 +165,11 @@ const ProfSkills = () => {
           whileHover={{ scale: 1.2 }}
           transition={{ type: "spring", stiffness: 300, damping: 7 }}
         >
-          <img src={skill.img} className="skill-img" alt="skil img" ></img>
+          <img src={skill.img} className="skill-img" alt="skil img"></img>
           <div className="skill-right-content">
             <div className="skill-name-container">
               <span className="skill-point me-2"></span>
-              <span className="skill-name text-white">{skill.skill_name}</span>
+              <span className="skill-name ">{skill.skill_name}</span>
             </div>
             <div className="progress-container">
               <span className="progress p-orange">
@@ -222,7 +222,7 @@ const PersSkills = () => {
           <div className="skill-right-content">
             <div className="skill-name-container">
               <span className="skill-point me-2"></span>
-              <span id="pers-skill-name" className="skill-name text-white">
+              <span id="pers-skill-name" className="skill-name ">
                 {skill.skill_name}
               </span>
             </div>
