@@ -41,6 +41,8 @@ p.name {
   -webkit-background-clip: text, padding-box;
   background-clip: text, padding-box;
   transition: 0.5s;
+  text-decoration: none;
+  margin: 3px 13px;
 }
 #basic-navbar-nav a:hover {
   --_p: 100%;

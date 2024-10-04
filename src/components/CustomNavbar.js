@@ -73,48 +73,48 @@ const CustomNavbar = () => {
       />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link
+          <a
             className={`hover-3 ${activeSection === "about" ? "active" : ""}`}
             href="#about"
             onClick={() => setExpanded(false)} // Collapse menu on link click
           >
             About
-          </Nav.Link>
-          <Nav.Link
+          </a>
+          <a
             className={`hover-3 ${activeSection === "projects" ? "active" : ""}`}
             href="#projects"
             onClick={() => setExpanded(false)}
           >
             Projects
-          </Nav.Link>
-          <Nav.Link
+          </a>
+          <a
             className={`hover-3 ${activeSection === "skills" ? "active" : ""}`}
             href="#skills"
             onClick={() => setExpanded(false)}
           >
             Skills
-          </Nav.Link>
-          <Nav.Link
+          </a>
+          <a
             className={`hover-3 ${activeSection === "experiences" ? "active" : ""}`}
             href="#experiences"
             onClick={() => setExpanded(false)}
           >
             Experiences
-          </Nav.Link>
-          <Nav.Link
+          </a>
+          <a
             className={`hover-3 ${activeSection === "educations" ? "active" : ""}`}
             href="#educations"
             onClick={() => setExpanded(false)}
           >
             Educations
-          </Nav.Link>
-          <Nav.Link
+          </a>
+          <a
             className={`hover-3 ${activeSection === "contact" ? "active" : ""}`}
             href="#contact"
             onClick={() => setExpanded(false)}
           >
             Contact
-          </Nav.Link>
+          </a>
         </Nav>
       </Navbar.Collapse>
       <a
