@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import { useInView, useAnimation, useScroll, motion, useSpring } from "framer-motion";
 import FreelanceProject from "./components/FreelanceProject";
 import titleIcon from "./images/titleIcon.png";
+import HireMePopup from "./components/HireMePopup";
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -39,6 +40,7 @@ function App() {
 
   return (
     <div className="App">
+      <HireMePopup />
       <motion.div className="my-progress-bar" style={{ scaleX }} />
       <CustomNavbar />
       <About />
