@@ -145,7 +145,7 @@
   font-weight: bold;
   margin-bottom: 1.5rem;
   margin-right: 13rem;
-  box-shadow: 0 4px 16px rgba(50, 187, 197, 0.3);
+  box-shadow: 0 4px 10px #0000005c;
   transition: transform 0.2s ease-in-out;
 
   img {
